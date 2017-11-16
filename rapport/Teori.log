@@ -1,11 +1,11 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.2.19)  14 NOV 2017 16:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2017.4.4)  16 NOV 2017 12:52
 entering extended mode
- \write18 enabled.
+ restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**Teori.tex
+**./Teori.tex
 (./Teori.tex
-LaTeX2e <2016/03/31> patch level 3
+LaTeX2e <2017/01/01> patch level 3
 Babel <3.9r> and hyphenation patterns for 83 language(s) loaded.
 ./Teori.tex:1: Undefined control sequence.
 l.1 \section
@@ -122,128 +122,51 @@ Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-Missing character: There is no - in font nullfont!
-./Teori.tex:5: Missing $ inserted.
-<inserted text> 
-                $
-l.5     \frac{-\hbar^{2}}{2m}
-                             \partialfrac{f}{x}
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 5.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 5.
-./Teori.tex:5: Extra }, or forgotten $.
-\hbar ->{\mathchar '26\mkern -9muh}
-                                   
-l.5     \frac{-\hbar^{2}}{2m}
-                             \partialfrac{f}{x}
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-./Teori.tex:5: Missing $ inserted.
-<inserted text> 
-                $
-l.5     \frac{-\hbar^{2}}{2m}
-                             \partialfrac{f}{x}
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./Teori.tex:5: Missing } inserted.
-<inserted text> 
-                }
-l.5     \frac{-\hbar^{2}}{2m}
-                             \partialfrac{f}{x}
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./Teori.tex:5: Missing $ inserted.
-<inserted text> 
-                $
-l.5     \frac{-\hbar^{2}}{2m}
-                             \partialfrac{f}{x}
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./Teori.tex:5: Extra }, or forgotten $.
-\frac #1#2->{\begingroup #1\endgroup \over #2}
-                                              
-l.5     \frac{-\hbar^{2}}{2m}
-                             \partialfrac{f}{x}
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
 ./Teori.tex:5: Undefined control sequence.
-l.5     \frac{-\hbar^{2}}{2m}\partialfrac
-                                         {f}{x}
+l.5     \partialfrac
+                    [4]{f}{x}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
+Missing character: There is no [ in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no x in font nullfont!
 
-./Teori.tex:7: LaTeX Error: \begin{document} ended by \end{align}.
+./Teori.tex:6: LaTeX Error: \begin{document} ended by \end{align}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.7 \end{align}
+l.6 \end{align}
                
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-./Teori.tex:7: Missing $ inserted.
-<inserted text> 
-                $
-l.7 \end{align}
-               
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
 
-./Teori.tex:7: Missing } inserted.
-<inserted text> 
-                }
-l.7 \end{align}
-               
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
+Overfull \hbox (20.0pt too wide) in paragraph at lines 1--7
+[]
+ []
 
 )
 ! Emergency stop.
-<*> Teori.tex
-             
+<*> ./Teori.tex
+               
 *** (job aborted, no legal \end found)
 
  
 Here is how much of TeX's memory you used:
- 9 strings out of 493013
- 167 string characters out of 6135682
- 53237 words of memory out of 5000000
- 3653 multiletter control sequences out of 15000+600000
+ 7 strings out of 493013
+ 141 string characters out of 6136994
+ 53646 words of memory out of 5000000
+ 3651 multiletter control sequences out of 15000+600000
  3640 words of font info for 14 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 21i,2n,14p,71b,64s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 6i,0n,6p,72b,19s stack positions out of 5000i,500n,10000p,200000b,80000s
 !  ==> Fatal error occurred, no output PDF file produced!
