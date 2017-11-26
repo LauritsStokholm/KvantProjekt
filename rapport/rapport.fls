@@ -310,10 +310,10 @@ INPUT c:/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map
 INPUT rapport.aux
 INPUT ./rapport.out
 INPUT ./rapport.out
+INPUT c:/texlive/2016/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc
 INPUT c:/texlive/2016/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc
 INPUT c:/texlive/2016/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc
 INPUT c:/texlive/2016/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc
-INPUT c:/texlive/2016/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc
 INPUT c:/texlive/2016/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc
 INPUT c:/texlive/2016/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc
 INPUT c:/texlive/2016/texmf-dist/fonts/type1/public/lm/lmbx12.pfb
@@ -327,4 +327,5 @@ INPUT c:/texlive/2016/texmf-dist/fonts/type1/public/lm/lmr6.pfb
 INPUT c:/texlive/2016/texmf-dist/fonts/type1/public/lm/lmr7.pfb
 INPUT c:/texlive/2016/texmf-dist/fonts/type1/public/lm/lmr8.pfb
 INPUT c:/texlive/2016/texmf-dist/fonts/type1/public/lm/lmsy10.pfb
+INPUT c:/texlive/2016/texmf-dist/fonts/type1/public/lm/lmsy7.pfb
 INPUT c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb
