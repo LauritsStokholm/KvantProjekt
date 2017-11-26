@@ -1,0 +1,6 @@
+PWD /Users/RasmusKlitgaard/Documents/git/rep_kvant/KvantProjekt/rapport
+INPUT /usr/local/texlive/2016/texmf.cnf
+INPUT /usr/local/texlive/2016/texmf-dist/web2c/texmf.cnf
+INPUT /usr/local/texlive/2016/texmf-var/web2c/pdftex/pdflatex.fmt
+INPUT kvantisering.tex
+OUTPUT kvantisering.log
