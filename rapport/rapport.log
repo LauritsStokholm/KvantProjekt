@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2017.4.4)  21 NOV 2017 11:47
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2017.4.4)  26 NOV 2017 12:11
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1669,18 +1669,19 @@ Package rerunfilecheck Info: File `rapport.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 37.
  ) 
 Here is how much of TeX's memory you used:
- 26982 strings out of 493013
- 485552 string characters out of 6136994
- 734000 words of memory out of 5000000
- 30155 multiletter control sequences out of 15000+600000
+ 26988 strings out of 493013
+ 485684 string characters out of 6136994
+ 736000 words of memory out of 5000000
+ 30159 multiletter control sequences out of 15000+600000
  71271 words of font info for 93 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  50i,11n,80p,10398b,792s stack positions out of 5000i,500n,10000p,200000b,80000s
-{c:/texlive/2016/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{c:/texlive/2016/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}{c:/texlive/2016/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{c:/texlive/2016/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}{c:/texlive/2016/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{c:/texlive/2016/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}<c:/texlive/2016/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/lm/lmex10.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/lm/lmmi10.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/lm/lmr10.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/lm/lmr12.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/lm/lmr6.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/lm/lmr7.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/lm/lmr8.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/lm/lmsy10.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on rapport.pdf (1 page, 156005 bytes).
+{c:/texlive/2016/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{c:/texlive/2016/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}{c:/texlive/2016/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}{c:/texlive/2016/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{c:/texlive/2016/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{c:/texlive/2016/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}<c:/texlive/2016/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/lm/lmex10.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/lm/lmmi10.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/lm/lmmi7.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/lm/lmr10.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/lm/lmr12.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/lm/lmr5.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/lm/lmr6.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/lm/lmr7.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/lm/lmr8.pfb><c:/texlive/2016/texmf-dist/fonts/type1/publ
+ic/lm/lmsy10.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on rapport.pdf (1 page, 179574 bytes).
 PDF statistics:
- 74 PDF objects out of 1000 (max. 8388607)
- 60 compressed objects within 1 object stream
- 10 named destinations out of 1000 (max. 500000)
+ 85 PDF objects out of 1000 (max. 8388607)
+ 69 compressed objects within 1 object stream
+ 12 named destinations out of 1000 (max. 500000)
  27649 words of extra memory for PDF output out of 29859 (max. 10000000)
 
