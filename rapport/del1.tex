@@ -1,22 +1,20 @@
 \section{Solution to the stationary Schrödinger Equation}
-Hvis vi antager, at vi betragter en partikel i en dimension, $x$,  er Schrödinger ligningen
+Antages, at der betragtes en partikel i en dimension, $x$,  er Schrödinger ligningen
 \begin{equation}
-    \frac{\hbar}{2m}\frac{\partial^2 \psi}{\partial x^2} + V(x) \psi = E \psi
+    \frac{\hbar^2}{2m}\frac{\partial^2 \psi}{\partial x^2} + V(x) \psi = E \psi
     \label{eq:scrodingerLigning1}
 \end{equation}
-isoleres $\frac{\partial^2 \psi}{\partial x^2}$ i \cref{eq:scrodingerLigning1}, får vi
-
+isoleres $\frac{\partial^2 \psi}{\partial x^2}$ i \cref{eq:scrodingerLigning1}, opnås
 \begin{equation}
-    \frac{\hbar}{2m}\frac{\partial^2 \psi}{\partial x^2} = 2m\psi (E  - V(x)) \frac{1}{\hbar^2}
+    \frac{\partial^2 \psi}{\partial x^2} = 2m\psi (E  - V(x)) \frac{1}{\hbar^2}
     \label{eq:scrodingerLigning2}
 \end{equation}
 defineres
 \begin{equation}
-P(x) := \sqrt{2m(E-V(x))}
+p(x) \equiv \sqrt{2m(E-V(x))}
 \end{equation}
 Kan \cref{eq:scrodingerLigning2} omskrives til
-
 \begin{equation}
-    
+    \frac{\partial^2 \psi}{\partial x^2} = - \frac{p^2}{\hbar^2} \psi
     \label{eq:scrodingerLigning3}
 \end{equation}

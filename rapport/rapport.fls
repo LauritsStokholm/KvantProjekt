@@ -296,6 +296,8 @@ INPUT c:/texlive/2016/texmf-dist/fonts/tfm/public/lm/ec-lmr12.tfm
 INPUT c:/texlive/2016/texmf-dist/fonts/tfm/public/lm/ec-lmbx12.tfm
 INPUT del1.tex
 INPUT del1.tex
+INPUT kvantisering.tex
+INPUT kvantisering.tex
 INPUT del2_brintatomet.tex
 INPUT del2_brintatomet.tex
 INPUT del3_tunnelering.tex
