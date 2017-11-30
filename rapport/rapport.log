@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.2.19)  16 NOV 2017 14:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.2.19)  30 NOV 2017 13:34
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1757,8 +1757,7 @@ LaTeX Font Info:    Try loading font information for TS1+lmr on input line 27.
 
 (/usr/share/texmf/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) (./del1.tex) (./del2_brintatomet.tex) (./del3_tunnelering.tex) (./del4_Ionisa
-tion.tex)
+) (./inledning.tex)
 
 FiXme Summary: Number of notes: 0,
 (FiXme)        Number of warnings: 0,
@@ -1767,34 +1766,34 @@ FiXme Summary: Number of notes: 0,
 (FiXme)        Total: 0.
 
 Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 35.
+(babel)             in language  on input line 38.
 Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 35.
+(babel)             in language  on input line 38.
 Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 35.
+(babel)             in language  on input line 38.
 Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 35.
+(babel)             in language  on input line 38.
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 35.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 35.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 38.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 38.
  (./rapport.aux
 Package cleveref Info: loaded `danish' language definitions on input line 21.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 35.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 35.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 38.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 38.
 Package rerunfilecheck Info: File `rapport.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 35.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 38.
  ) 
 Here is how much of TeX's memory you used:
- 26731 strings out of 493013
- 482969 string characters out of 6135682
- 719075 words of memory out of 5000000
- 29914 multiletter control sequences out of 15000+600000
+ 26713 strings out of 493013
+ 482660 string characters out of 6135682
+ 718108 words of memory out of 5000000
+ 29908 multiletter control sequences out of 15000+600000
  71271 words of font info for 93 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  50i,11n,80p,10396b,792s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1803,10 +1802,10 @@ ips/lm/lm-ts1.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/shar
 e/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm
 /lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr6.pfb></usr/share/texmf/f
 onts/type1/public/lm/lmr8.pfb>
-Output written on rapport.pdf (1 page, 126236 bytes).
+Output written on rapport.pdf (1 page, 123372 bytes).
 PDF statistics:
- 41 PDF objects out of 1000 (max. 8388607)
- 32 compressed objects within 1 object stream
- 6 named destinations out of 1000 (max. 500000)
+ 38 PDF objects out of 1000 (max. 8388607)
+ 29 compressed objects within 1 object stream
+ 3 named destinations out of 1000 (max. 500000)
  27649 words of extra memory for PDF output out of 29859 (max. 10000000)
 
