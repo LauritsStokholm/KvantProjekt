@@ -8,6 +8,8 @@
 *.xml
 *.synctex.gz.orig
 *.synctex.gz
+*.fdb_latexmk
+*.fls
 
 #ikke sync pdf
 *.pdf.orig
