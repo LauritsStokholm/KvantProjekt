@@ -1,39 +1,54 @@
 \section{Solution to the stationary Schrödinger Equation}
+
 Antages, at der betragtes en partikel i en dimension, $x$,  er Schrödinger ligningen
+
 \begin{equation}
     \frac{\hbar^2}{2m}\frac{\partial^2 \psi}{\partial x^2} + V(x) \psi = E \psi
     \label{eq:scrodingerLigning1}
 \end{equation}
+
 isoleres $\frac{\partial^2 \psi}{\partial x^2}$ i \cref{eq:scrodingerLigning1}, opnås
+
 \begin{equation}
     \frac{\partial^2 \psi}{\partial x^2} = 2m\psi (E  - V(x)) \frac{1}{\hbar^2}
     \label{eq:scrodingerLigning2}
+
 \end{equation}
+
 defineres $p(x)$ klassisk
+
 \begin{equation}
 p(x) \equiv \sqrt{2m(E-V(x))}
+
 \end{equation}
 Kan \cref{eq:scrodingerLigning2} omskrives til
+
 \begin{equation}
     \frac{\partial^2 \psi}{\partial x^2} = - \frac{p^2}{\hbar^2} \psi.
     \label{eq:scrodingerLigning3}
 \end{equation}
+
 Anvendes ansatzen
+
 \begin{equation}
     \psi(x) = A(x) e^{i \phi(x)}
     \label{eq:ansatz}
 \end{equation}
+
 hvor $\psi (x)$ e$ \in \mathbb{C}$. Antages
+
 \begin{equation}
  E > V(x) \forall x
 \end{equation}
+
 Er $A(x)$ en reel amplitude og $\phi(x)$ er en reel fase. Dette kan altid gøres, der man ved hjælp af ledet  $e^{i \phi(x)} $. Dette led danner en vektor $ \in \mathbb{C}$ med normen 1, herefter kan $A(x)$  skalere vektoren, til at ramme alle punkter. Anvendes venstre side af \cref{eq:scrodingerLigning3} på \cref{eq:ansatz} fås (hvor mærke $'$ angiver differentation med hensyn til x)
+
 \begin{equation}
     \frac{\partial \psi}{\partial x} = e^{i \phi(x)}(A' + iA\phi ')
     \label{eq:diff1gange}
 \end{equation}
 
 \begin{equation}
-    \frac{\partial^2 \psi}{\partial x^2} =
+    \frac{\partial^2 \psi}{\partial x^2} = e^{i \psi}
     \label{eq:diff2gange}
 \end{equation}
