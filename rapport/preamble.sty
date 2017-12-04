@@ -88,6 +88,8 @@
 \newcommand\scipy{SciPy\xspace}
 
 % Differentiate
-\newcommand\diff[2]{\frac{\text{d}#1}{\text{d}#2}}
+\newcommand{\diff}[3][]{\frac{\mathrm{d}\ifblank{#1}{}{^ #1} #2}{\mathrm{d} #3 \ifblank{#1}{}{^ #1}}}
+\newcommand\dd[1]{\,\mathrm{d}#1}
+    %\newcommand\diff[2]{\frac{\text{d}#1}{\text{d}#2}}
 \newcommand{\pdiff}[3][]{\frac{\partial\ifblank{#1}{}{^ #1} #2}
       {\partial #3 \ifblank{#1}{}{^ #1}}}
