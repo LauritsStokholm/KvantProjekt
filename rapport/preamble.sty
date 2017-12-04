@@ -41,8 +41,8 @@
 
 % Margins
 \setlxvchars
-\setulmargins{*}{*}{1.618}
-\setlrmargins{*}{*}{1}
+\setulmarginsandblock{2cm}{2cm}{*}
+\setlrmarginsandblock{2cm}{2cm}{*}
 \checkandfixthelayout[nearest] % Necessary for memoir to compile the settings correctly
 
 \usepackage{graphicx}
@@ -76,7 +76,7 @@
 \usepackage{varioref} % Brug \vrec, til referencer i nærområdet.
 % Hyperlinks i TOC, etc.
 \usepackage[colorlinks=true, allcolors=black]{hyperref}
-\usepackage{hypcap} 
+\usepackage{hypcap}
 
 % Smarte referancer
 \usepackage[danish]{cleveref}
@@ -93,3 +93,5 @@
     %\newcommand\diff[2]{\frac{\text{d}#1}{\text{d}#2}}
 \newcommand{\pdiff}[3][]{\frac{\partial\ifblank{#1}{}{^ #1} #2}
       {\partial #3 \ifblank{#1}{}{^ #1}}}
+
+\usepackage{mathptmx}

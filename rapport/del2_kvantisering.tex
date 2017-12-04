@@ -14,3 +14,22 @@ Her ses det at vi kan skrive dette om, ved at definere to nye konstanter, $C_3 \
   \Bigl[    C_3\sin{\phi(x)}+C_4\cos{\phi(x)}   \Bigr]
   \label{eq:kvantiseringSinCos}
 \end{equation}
+Hvor det gælder at $\phi(x) = \frac{1}{\hbar}\int p(x) dx$. Nu sætter vi grænserne til at være fra $0$ til $x$, så vi får
+\begin{equation}
+  \phi(x) = \frac{1}{\hbar}\int_{0}^{x} p(x')dx'
+\end{equation}
+Altså finder vi at
+\begin{equation}
+  \psi(a) = 0 = \frac{1}{\sqrt{p(x)}}\Bigl[C_3\sin(\phi(a)) + C_4\cos(\phi(a))     \Bigr]
+  \label{eq:kvantiseringGraense}
+\end{equation}
+Da $\phi(a) = \frac{1}{\hbar}\int_{0}^{a} p(x') dx' = 0$ (da vi er i det klassiske vendepunkt) går sinus leddet i 0, men cosinus leddet går ikke i 0, hvorfor vi må kræve at $C_4 = 0$.\\
+Nu har vi altså at
+\begin{equation}
+  \psi(x) = \frac{1}{\sqrt{p(x)}}C_3\sin(\phi(x))
+\end{equation}
+Nu skal det stadig gælde at $\psi(a) = 0$, altså må dette betyde at $sin(\phi(a)) = 0$ hvilket medfører at $\phi(a) = n\pi$, hvor $n = 0,1,2...$.
+Dette giver os altså at
+\begin{equation}
+  \int_{0}^{a} p(x) dx = n\pi\hbar
+\end{equation}

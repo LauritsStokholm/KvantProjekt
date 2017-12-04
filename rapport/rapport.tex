@@ -1,7 +1,7 @@
-\documentclass[danish, a4paper, twocolumn, oneside]{memoir}
+\documentclass[danish, a4paper, onecolumn, oneside]{memoir}
 
 \usepackage{preamble}
-
+\usepackage[document]{ragged2e} % Align text til venstre
 % EDIT PATH
 %\graphicspath\left\{ ./Graphics/}}
 
@@ -9,13 +9,22 @@
 %\usepackage{minted}
 \usepackage{csquotes}
 
+
+
+\pretitle{\begin{center}\Huge\bfseries}
 \title{A WKB-Type Approximation to the Schrödinger Equation}
+\posttitle{\par\vskip1em{\normalfont\normalsize\scshape  Projektstiller: Philip Daniel Blocher,
+\\ Instruktor: Philip Daniel Blocher,
+\\ Department of Physics and Astronomy
+\\ - Fælles besvarelse \par\vfill}\end{center}}
 \author{%
-        René Czepluch       \thanks{rene.czepluch@post.au.dk},
-   \and Rasmus Klitgaard    \thanks{rasmusklitgaard97@gmail.com},
-   \and Laurits N. Stokholm \thanks{laurits.stokholm@post.au.dk}\\
-   \hspace{-9cm} Department of Physics and Astronomy
+        \textbf{René Czepluch} \textit{201607229}       \thanks{rene.czepluch@post.au.dk},
+   \and \textbf{Rasmus Klitgaard} \textit{201606410}    \thanks{rasmusklitgaard97@gmail.com},
+   \and \textbf{Laurits N. Stokholm} \textit{StudNr} \thanks{laurits.stokholm@post.au.dk}
+
    }
+
+\predate{\vfill\begin{center}\large}
 
 %\institute{Department of Physics and Astronomy}
    \date{\today}
@@ -24,8 +33,11 @@
    %\addbibresource{bib.bib}
 %
 \begin{document}
+\begin{titlingpage}
 \maketitle
+\end{titlingpage}
 \noindent
+%TODO SØRG FOR TEKSTØRRRELSEN ER 11 PT
 \input{indledning}
 \input{del1_wkb}
 \input{del2_kvantisering}
