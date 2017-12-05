@@ -85,7 +85,7 @@ Af disse kan\cref{eq:Im}  løses, løsningen er: % er det rigtigt? Hvorfor er de
     \label{eq:ImLoes}
 \end{equation}
 
-Der eksisterer ingen løsninger til \cref{eq:Re}, og derfor foretages en approximation, ved blot at droppe $\frac{d^{2}}{d x^{2}}  A{\left (x \right )}$ leddet i samme ligning. Dette er en god approixmation, hvis $A(x)$ varier langsomt. Da kan \cref{eq:Re} omskrives til
+Hvor C er en konstant. Der eksisterer ingen løsninger til \cref{eq:Re}, og derfor foretages en approximation, ved blot at droppe $\frac{d^{2}}{d x^{2}}  A{\left (x \right )}$ leddet i samme ligning. Dette er en god approixmation, hvis $A(x)$ varier langsomt. Da kan \cref{eq:Re} omskrives til
 
 \begin{equation}
     \left(\frac{d}{d x} \phi{\left (x \right )}\right)^{2}
@@ -99,13 +99,14 @@ Der eksisterer ingen løsninger til \cref{eq:Re}, og derfor foretages en approxi
     \label{eq:ReApproxFinal}
 \end{equation}
 
-% TILFØJ ARGUMENT HVAD SKER DER HER
+Integreres med hensyn til x på begge sider, opnås
 
 \begin{equation}
-    \phi(x) = \pm \frac{1}{\hbar} \int p(x) dx
+    \phi(x) = \pm \frac{1}{\hbar} \int p(x) dx.
+    \label{eq:daPhi}
 \end{equation}
 
-% TILFØJ ARGUMENT
+
 
 \begin{equation}
     \psi(x) \cong \frac{C}{\sqrt{p(x)}} e^{\phi(x)} \cong \frac{C}{\sqrt{p(x)}} e^{\pm \frac{1}{\hbar} \int p(x) dx}
