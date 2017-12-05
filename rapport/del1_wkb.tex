@@ -98,16 +98,21 @@ Hvor C er en konstant. Der eksisterer ingen løsninger til \cref{eq:Re}, og derf
     \label{eq:ReApproxFinal}
 \end{equation}
 
-Hvis der integrers med hensyn til x
+Hvis der integreres med hensyn til x findes
 
 \begin{equation}
     \phi(x) = \pm \frac{1}{\hbar} \int p(x) dx
     \label{wq:thisPhi}
 \end{equation}
 
-% TILFØJ ARGUMENT
+Substitueres $A(x)$ fra \cref{eq:ImLoes} og udtrykket for $\frac{d}{d x} \phi{\left (x \right )}$ fra \cref{eq:ReApproxFinal}  ind i ansatzen fra \cref{eq:ansatz} findes
 
 \begin{equation}
-    \psi(x) \cong \frac{C}{\sqrt{p(x)}} e^{\phi(x)} \cong \frac{C}{\sqrt{p(x)}} e^{\pm \frac{1}{\hbar} \int p(x) dx}
+    \psi(x) = A(x) e^{i \phi(x)} \cong
+    \frac{C}{\sqrt{(\frac{d}{d x} \phi{\left (x \right )})}} e^{\phi(x)} \cong
+    \frac{C}{\sqrt{\frac{p(x)}{\hbar}}} e^{\pm \frac{1}{\hbar} \int p(x) dx} \cong
+    \frac{C'}{\sqrt{p(x)}} e^{\pm \frac{1}{\hbar} \int p(x) dx}
     \label{eq:final}
 \end{equation}
+
+Hvor $C'$ er en ny konstant, der indeholder $\hbar$ og evt. andre konstanter fra integralet. Dette er det endelige udtryk for aproximationen. Løsningen ville da være en linear kombination af den positive og negative del.

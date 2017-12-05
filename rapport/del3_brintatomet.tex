@@ -58,6 +58,35 @@ $a+b$ leddet er oplagt, mens $ab$ leddet bliver
      = & \frac{a_0^2}{\varepsilon} l(l+1)
 \end{align}
 
+Det ses at det passer og derfor kan vi arbejde videre med disse værdier $a$ og $b$.
+\begin{align}
+  k(r) = & \frac{p(r)}{\hbar}\\
+       = & \frac{\sqrt{\varepsilon}}{a_0}\frac{1}{r}\sqrt{(r-a)(r-b)}
+\end{align}
+Nu kan vi altså integrere fra $a$ til $b$, som er de klassiske vendepunkter og bruge \cref{eq:kvantiDone}.
+\begin{equation}
+  \int_{a}^{b}k(r)dr = \frac{\sqrt{\varepsilon}}{a_0} \Bigl[\frac{\pi}{2}(\sqrt{b}-\sqrt{a})^2  \Bigr]
+\end{equation}
+Her er det brugt at
+\begin{equation}
+  \int_{\alpha}^{\beta}\frac{1}{u}\sqrt{(u-\alpha)(u-\beta)}du = \frac{\pi}{2}(\sqrt{\beta}-\sqrt{\alpha})^2
+\end{equation}
+Herfra følger det at
+\begin{align}
+  n' = & \frac{\sqrt{\varepsilon}}{2a_0}(\sqrt{b}-\sqrt{a})^2\\
+     = & \frac{\sqrt{\varepsilon}}{2a_0}(b+a-2\sqrt{ab})\\
+     = & \frac{\sqrt{\varepsilon}}{2a_0}\Bigl(\frac{2a_0}{\varepsilon}-2a_0\sqrt{\frac{1}{\varepsilon}l(l+1)}\Bigr)\\
+     = & \frac{1}{\sqrt{\varepsilon}} -l(l+1)
+\end{align}
+Herfra finder vi $\varepsilon$ til at være
+\begin{equation}
+  \varepsilon = \frac{1}{\Bigl[n'+l(l+1)  \Bigr]^2}
+\end{equation}
+Og hvis vi husker på at $E = -\varepsilon Ry$, så kan vi skrives
+\begin{equation}
+  E_{n',l} = \frac{-Ry}{\Bigl[n'+l(l+1)  \Bigr]^2}
+\end{equation}
+
 
 
 Plottes $V_{\text{eff}}$
