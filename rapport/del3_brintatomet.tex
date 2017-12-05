@@ -24,6 +24,41 @@ Sættes energien til at være et multiplum af Rydbergenergien, $E = -\varepsilon
     = & \sqrt{\frac{1}{a_{0}^{2}\mathrm{Ry}} \left( (-\varepsilon \mathrm{Ry}) + \frac{2a_{0}\mathrm{Ry}}{r} - a_{0}^{2}\mathrm{Ry}\frac{l(l+1)}{r^{2}} \right)}\\
     = & \frac{1}{r} \sqrt{\frac{1}{a_{0}^{2}{Ry}} \left( (-\varepsilon \mathrm{Ry})r^{2} + 2a_{0}\mathrm{Ry} r - a_{0}^{2}\mathrm{Ry} l(l+1) \right)}
 \end{align}
+Trækker vi her $\frac{1}{a_0}$ udenfor og ganger $\mathrm{Ry}$ ind i parantesen får vi
+\begin{align}
+  k(r) = & \frac{1}{a_0} \frac{1}{r} \sqrt{-\varepsilon r^2 + 2a_0r - a_0^2l(l+1)} \\
+  = & \frac{\sqrt{\varepsilon}}{a_0} \frac{1}{r} \sqrt{r^2 - \frac{2a_0}{\varepsilon}r + \frac{a_0^2}{\varepsilon}l(l+1)}
+\end{align}
+
+Nu er det indre i kvadratroden på en form som kan skrives som noget $(x-a)(x-b) = x^2 -x(a+b) + ab$. Nu undersøges det om man kan ende ud med at få disse $a$ og $b$ størrelser til at være de klassiske vendepunkter, som er de $r$ som opfylder at $k(r) = 0$.
+Da det udenfor kvadratroden i $k(r)$ ikke kan være 0, sættes det indre lig 0.
+\begin{equation}
+  r^2 - \frac{2a_0}{\varepsilon}r + \frac{a_0^2}{\varepsilon}l(l+1) = 0
+\end{equation}
+Dette har løsninger ved
+\begin{align}
+  r = & \frac{\frac{2a_0}{\varepsilon} \pm \sqrt{\frac{4a_0^2}{\varepsilon^2} - \frac{4a_0^2}{\varepsilon}l(l+1)   }  }{2}\\
+    = & \frac{a_0}{\varepsilon}[1+\sqrt{1-\varepsilon l(l+1)}]
+\end{align}
+Herved bliver de klassiske vendepunkter
+\begin{align}
+  a = & \frac{a_0}{\varepsilon}\Bigl[1-\sqrt{1-\varepsilon l(l+1)}  \Bigr]\\
+  b = & \frac{a_0}{\varepsilon}\Bigl[1+\sqrt{1-\varepsilon l(l+1)}  \Bigr]
+\end{align}
+For at det nu skal passe i vores udtryk for $k(r)$ tjekkes det om
+\begin{align}
+  a+b = & \frac{2a_0}{\varepsilon} \\
+  ab  = & \frac{a_0^2}{\varepsilon} l(l+1)
+\end{align}
+$a+b$ leddet er oplagt, mens $ab$ leddet bliver
+\begin{align}
+  ab = & \frac{a_0^2}{\varepsilon^2}\Bigl(1-\sqrt{1-\varepsilon l(l+1)} \Bigr)\Bigl(1+\sqrt{1-\varepsilon l(l+1)} \Bigr)\\
+     = & \frac{a_0^2}{\varepsilon^2}\Bigl(1-(1-\varepsilon l(l+1)) \Bigr)\\
+     = & \frac{a_0^2}{\varepsilon^2} \varepsilon l(l+1)\\
+     = & \frac{a_0^2}{\varepsilon} l(l+1)
+\end{align}
+
+
 
 Plottes $V_{\text{eff}}$
 
