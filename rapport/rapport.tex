@@ -11,22 +11,24 @@
 
 
 
-\pretitle{\begin{center}\Huge\bfseries}
+\pretitle{\centering\Huge\bfseries}
 \title{A WKB-Type Approximation to the Schrödinger Equation}
-\posttitle{\par\vskip1em{\normalfont\normalsize\scshape  Projektstiller: Philip Daniel Blocher,
-\\ Instruktor: Philip Daniel Blocher,
-\\ Department of Physics and Astronomy
-\\ - Fælles besvarelse \par\vfill}\end{center}}
+\posttitle{\vspace{2cm}\\{\centering\normalfont\normalsize\scshape%
+   Projektstiller: Philip Daniel Blocher,\\
+   Instruktor: Philip Daniel Blocher,\\
+   Institut for Fysik og Astronom,\\
+   Fælles besvarelse \par\vfill}}
 \author{%
-        \textbf{René Czepluch} \textit{201607229}       \thanks{rene.czepluch@post.au.dk},
-   \and \textbf{Rasmus Klitgaard} \textit{201606410}    \thanks{rasmusklitgaard97@gmail.com},
-   \and \textbf{Laurits N. Stokholm} \textit{201605496} \thanks{laurits.stokholm@post.au.dk}
-  %
-   }
+    \textbf{René Czepluch}$^{*}$($201607229$)% \thanks{rene.czepluch@post.au.dk}
+    \and \textbf{Rasmus Klitgaard}$^{\dagger}$($201606410$)%\thanks{rasmusklitgaard97@gmail.com}
+    \and \textbf{Laurits N. Stokholm}$^{\ddagger}$($201605496$)%\thanks{201605496@post.au.dk}
+    \\
+    {\small ($*$) rene.czepluch@post.au.dk, ($\dagger$) rasmusklitgaard97@gmail.com, ($\ddagger$) 201605496@post.au.dk}
+    \vspace{2cm}
+}
 
-\predate{\vfill\begin{center}\large}
-
-%\institute{Department of Physics and Astronomy}
+\predate{\centering\begin{onecolabstract}\input{abstract}\end{onecolabstract}\vfill}
+%\predate{\centering\vfill\large}
    \date{\today}
 
    \usepackage[backend=biber, style=authortitle, defernumbers=true, sorting=nty]{biblatex}
@@ -34,13 +36,11 @@
 	\defbibheading{secbib}[\bibname]{%
 		\section*{#1}%
 		\markboth{#1}{#1}}
-%
+
 \begin{document}
 \begin{titlingpage}
 \maketitle
 \end{titlingpage}
-\noindent
-%TODO SØRG FOR TEKSTØRRRELSEN ER 11 PT
 \input{indledning}
 \input{del1_wkb}
 \input{del2_kvantisering}
