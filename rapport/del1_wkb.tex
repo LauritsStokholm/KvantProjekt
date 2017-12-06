@@ -15,22 +15,35 @@ Det er kendt, at $\psi(x) \in \mathbb{C}$ er en kompleksfunktion som kan skrives
 Lad $E > V(x) \ \forall x$, hvilket svarer til et klassisk regime.
 Nu kan $\pdiff[2]{\psi(x)}{x}$ bestemmes. For overskueligheden lader vi $A'(x) = \pdiff{A}{x}$, og så fremdeles af højere ordens led.
 \begin{align}
-    \pdiff[2]{\psi(x)}{x} = & \pdiff{}{x}\left( \left[ A'(x) + A(x)i\phi'(x) \right]e^{i\phi(x)} \right) \\
-    = & \left[ A''(x) + A'(x)i\phi'(x) + A'(x)i\phi'(x) + A(x)i\phi''(x) - A(x)( \phi'(x))^2\right]e^{i\phi(x)} \\
-    = & \left(\left[ A''(x) - A(x)(\phi'(x))^2\right] + i \left[2A'(x)\phi'(x) + A(x)\phi''(x) \right]\right)e^{i\phi(x)}\\
-    = & -\frac{p^2}{\hbar^2}\psi(x) = -\frac{p^2}{\hbar^2} A(x)e^{i\phi(x)}
+    \pdiff[2]{\psi(x)}{x} = & \pdiff{}{x}\left( \left[ A'(x) + A(x)i\phi'(x) \right]e^{i\phi(x)} \right), \\
+    = & \left[ A''(x) + A'(x)i\phi'(x) + A'(x)i\phi'(x) + A(x)i\phi''(x) - A(x)( \phi'(x))^2\right]e^{i\phi(x)}, \\
+    = & \left(\left[ A''(x) - A(x)(\phi'(x))^2\right] + i \left[2A'(x)\phi'(x) + A(x)\phi''(x) \right]\right)e^{i\phi(x)},\\
+    = & -\frac{p^2}{\hbar^2}\psi(x) = -\frac{p^2}{\hbar^2} A(x)e^{i\phi(x)}.
     \label{eq:regime}
 \end{align}
 Hvor sidste udtryk kommer fra \cref{eq:schrodingerligning} sammensat med \cref{eq:ansatz}.
-Denne andenordens differentialligning kan opdeles i sin real-- og imaginærdel. Desuden kan det udnyttes, at $\left( A(x)^2\phi'(x) \right)' = 2A'(x)\phi'(x) - A^2(x)\phi''(x)$, hvorfor 
+Denne andenordens differentialligning kan opdeles i sin real-- og imaginærdel. Desuden kan det udnyttes, at $\left( A(x)^2\phi'(x) \right)' = 2A'(x)\phi'(x) + A^2(x)\phi''(x)$, hvorfor 
 
 \begin{align}
     \overbrace{A''(x) - A(x)\left( \phi'(x) \right)^{2} = - \frac{p^{2}}{\hbar^{2}}A(x)}^{\text{Realdel}} \quad \text{og} \quad%
-    \overbrace{A'(x)\phi'(x) + A(x)\phi''(x) = 0}^{\text{Imaginærdel}}
+    \overbrace{\left( A(x)^{2}\phi'(x) \right)' = 0}^{\text{Imaginærdel}}.
     \label{eq:realogimag}
 \end{align}
+Heraf ses det fra den imaginære del, at det indre i parentesen er konstant, hvorfor
+\begin{align}
+    \left( A(x)^{2}\phi'(x) \right)' = 0  \quad & \Leftrightarrow  \quad A(x)^{2}\phi'(x) = C^{2} \in \mathbb{C} \\
+    & \Leftrightarrow  \quad A(x) = \frac{C}{\sqrt{\phi'(x)}}
+    \label{eq:konst}
+\end{align}
+Desuden, ved at defineres $k(x) = \frac{p(x)}{\hbar}$, kan realdelen omskrives. Indtil videre er der regnet eksakt, men denne del af differentialligning er svær at løse. Derfor antages $A$ som værende langsomt varierende, hvorfor krumningen $A''(x)\ll 1$ og kan derfornegligeres. Specielt er $\frac{A''(x)}{A(x)} \ll \phi'(x)^{2}\wedge \frac{p^{2}}{\hbar^{2}}$
+\begin{align}
+    A''(x) - A(x)(\phi'(x))^{2} & =  -k(x)^{2}A(x)\\
+    \Leftrightarrow \frac{A''(x)}{A(x)} & = -k(x)^{2} + (\phi'(x))^{2} = 0 \\
+    \Leftrightarrow \left(\phi'(x)\right)^{2} & = k(x)^{2} \Leftrightarrow  \phi'(x) = \pm \frac{p}{\hbar}
+    \label{eq:ho}
+\end{align}
+hvorfor $\phi = \pm \frac{1}{\hbar}\int p(x) dx$
 
-%
 %Dette må også være lig med højre side af \cref{eq:scrodingerLigning3}. Substitueres udtrykket for $\psi$ fra \cref{eq:ansatz} kan \cref{eq:diff2gange} reduceres til
 %
 %\begin{align}
@@ -97,7 +110,3 @@ Denne andenordens differentialligning kan opdeles i sin real-- og imaginærdel. 
 %\end{equation}
 %
 %Hvor $C'$ er en ny konstant, der indeholder $\hbar$ og evt. andre konstanter fra integralet. Dette er det endelige udtryk for aproximationen. Løsningen ville da være en linear kombination af den positive og negative del.
-\begin{equation}
-    \frac{1}{1} \ll \hbar^2
-    \label{eq:krav}
-\end{equation}
