@@ -1,4 +1,5 @@
 import numpy as np
+import matplotlib as mpl
 import matplotlib.pyplot as plt
 import scipy.constants as sp
 import sys
@@ -13,11 +14,12 @@ params = {'legend.fontsize'     : '20',
                                    r'\usepackage{amsmath}'],
           'axes.spines.right'   : False,
           'axes.spines.top'     : False,
-          'figure.figsize'      : [10, 8],
+          'figure.figsize'      : [10, 7],
           'legend.frameon'      : False
           }
 
 plt.rcParams.update(params)
+
 plt.rc('text',usetex =True)
 plt.rc('font', **{'family' : "sans-serif"})
 # %% Def constants
@@ -45,8 +47,8 @@ def linjePlot(x,Energy,ax,color='k'):
     ax.plot(x,E,color)
 
 
-l_width = 1.1
-n_width = 1.4
+l_width = 1.7
+n_width = 1.9
 
 
 # %% values
@@ -64,13 +66,58 @@ ax1.legend(loc=5)
 
 
 
+noOfl = 4
+n_start = 2
+n_end = 12
+l_start = 4
 
 fig2,ax2 = plt.subplots()
-for n in range(1,5):
+for n in range(n_start,n_end):
     #WKB delen
-    for l in range(1,5):
-        linjePlot(linjer(l_width,1+l),wkbEnergi(n,l),ax2,'k')
+    for l in range(0,noOfl):
+        linjePlot(linjer(l_width,l_start-1+l),wkbEnergi(n,l),ax2,'k')
     linjePlot(linjer(n_width,1),actualEnergi(n),ax2,'k')
+
+
+
+ax1.spines['right'].set_visible(False)
+ax1.spines['top'].set_visible(False)
+
+# Only show ticks on the left and bottom spines
+ax1.yaxis.set_ticks_position('left')
+ax1.xaxis.set_ticks_position('bottom')
+
+ax2.spines['right'].set_visible(False)
+ax2.spines['top'].set_visible(False)
+
+# Only show ticks on the left and bottom spines
+ax2.yaxis.set_ticks_position('left')
+ax2.xaxis.set_ticks_position('bottom')
+
+ticks = [r"$\text{Eksakt}$",r"$\text{WKB}$"]
+for l in range(0,noOfl):
+    ticks.append(r"$l = %s $ "%(l))
+
+
+xTick = [2.3, 3.5]
+for i in range(0,noOfl):
+    xTick.append(i + l_start+(l_width-1)/2)
+
+
+plt.xticks(xTick, ticks)
+
+# plt.tight_layout()
+plt.ylabel(r"$E \ [\si{\electronvolt}]$")
+plt.tick_params(
+    axis='x',          # changes apply to the x-axis
+    which='both',      # both major and minor ticks are affected
+    bottom='off',      # ticks along the bottom edge are off
+    top='off',         # ticks along the top edge are off
+    labelbottom='on')
+
+fig2.savefig("energyPlot.png")
+plt.tight_layout()
+
 
 
 plt.show()

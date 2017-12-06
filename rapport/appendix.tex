@@ -3,15 +3,17 @@ Her udføres et såkaldt sanity check på den uendelige brønd.
 \begin{align}
     V(x) =
     \begin{cases}
-    0, & x\in]0, a[ \\
-    \infty & x\nin]0, a[
+    0, & x\in]a, b[ \\
+    \infty & x\notin]a, b[
     \end{cases}
     \label{pot}
 \end{align}
-Resultatet
+Kvantiseringsbetingelsen giver da, at
 \begin{align}
-    \int_{a}^{b} p(x) dx = n\pi \hbar = \int_{a}^{b} \sqrt{2mE}
-    \Leftrightarrow E =
-    \label{<+label+>}
-\end{align}<++>
+    \int_{a}^{b} p(x) dx = & n\pi \hbar, \quad \text{hvor} \quad p(x) = \sqrt{2m(E-V_{\text{eff}})}\\
+    \Leftrightarrow \sqrt{2mE}\int_{a}^{b} dx = & \sqrt{2mE}(b-a) = n\pi \hbar\\
+    \Leftrightarrow E = & \frac{n^{2}\pi^{2}\hbar^{2}}{2m(b-a)^{2}}
+    \label{ja}
+\end{align}
+hvilket stemmer overens med \cite[s. 30]{griffiths}
 
