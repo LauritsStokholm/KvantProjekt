@@ -1,4 +1,5 @@
 import numpy as np
+import matplotlib as mpl
 import matplotlib.pyplot as plt
 import scipy.constants as sp
 import sys
@@ -13,11 +14,12 @@ params = {'legend.fontsize'     : '20',
                                    r'\usepackage{amsmath}'],
           'axes.spines.right'   : False,
           'axes.spines.top'     : False,
-          'figure.figsize'      : [10, 8],
+          'figure.figsize'      : [8, 14],
           'legend.frameon'      : False
           }
 
 plt.rcParams.update(params)
+
 plt.rc('text',usetex =True)
 plt.rc('font', **{'family' : "sans-serif"})
 # %% Def constants
@@ -45,8 +47,8 @@ def linjePlot(x,Energy,ax,color='k'):
     ax.plot(x,E,color)
 
 
-l_width = 1.1
-n_width = 1.4
+l_width = 1.5
+n_width = 1.9
 
 
 # %% values
@@ -66,11 +68,31 @@ ax1.legend(loc=5)
 
 
 fig2,ax2 = plt.subplots()
-for n in range(1,5):
+for n in range(12,20):
     #WKB delen
-    for l in range(1,5):
+    for l in range(0,8):
         linjePlot(linjer(l_width,1+l),wkbEnergi(n,l),ax2,'k')
     linjePlot(linjer(n_width,1),actualEnergi(n),ax2,'k')
 
 
-plt.show()
+
+ax1.spines['right'].set_visible(False)
+ax1.spines['top'].set_visible(False)
+
+# Only show ticks on the left and bottom spines
+ax1.yaxis.set_ticks_position('left')
+ax1.xaxis.set_ticks_position('bottom')
+
+ax2.spines['right'].set_visible(False)
+ax2.spines['top'].set_visible(False)
+
+# Only show ticks on the left and bottom spines
+ax2.yaxis.set_ticks_position('left')
+ax2.xaxis.set_ticks_position('bottom')
+plt.tight_layout()
+
+
+plt.tight_layout()
+
+
+# plt.show()
