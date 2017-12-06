@@ -1,13 +1,13 @@
 \documentclass[danish, a4paper, 11pt, onecolumn, oneside]{memoir}
 
 \usepackage{preamble}
-%\usepackage[document]{ragged2e} % Align text til venstre
+\usepackage[document]{ragged2e} % Align text til venstre
 % EDIT PATH
 %\graphicspath\left\{ ./Graphics/}}
 
 % Indkommentere nedenstående, hvis der skal indsættes kode
 %\usepackage{minted}
-\usepackage{ csquotes}
+\usepackage{csquotes}
 
 
 
@@ -16,7 +16,7 @@
 \posttitle{\vspace{2cm}\\{\centering\normalfont\normalsize\scshape%
    Projektstiller: Philip Daniel Blocher,\\
    Instruktor: Philip Daniel Blocher,\\
-   Institut for Fysik og Astronom,\\
+   Institut for Fysik og Astronomi,\\
    Fælles besvarelse \par\vspace{2cm}}}
 \author{%
     \textbf{René Czepluch}$^{*}$($201607229$)% \thanks{rene.czepluch@post.au.dk}
@@ -27,10 +27,10 @@
     \vspace{2cm}
 }
 
-%\predate{\centering\begin{onecolabstract}\input{abstract}\end{onecolabstract}}
+\predate{\begin{center}\begin{onecolabstract}\input{abstract}\end{onecolabstract}}
 %\predate{\centering\vfill\large}
-
-   \date{\today}
+\date{\today}
+\postdate{\end{center}}
 
    \usepackage[backend=biber, style=authortitle, defernumbers=true, sorting=nty]{biblatex}
    \addbibresource{bib.bib}
@@ -45,10 +45,11 @@
 \end{titlingpage}
 \input{indledning}
 \input{del1_wkb}
+% \input{backup}
 \input{del2_kvantisering}
 \input{del3_brintatomet}
-\input{del4_tunnelering}
-\input{del5_ionisation}
+% \input{del4_tunnelering}
+% \input{del5_ionisation}
 \input{konklusion}
 
 \printbibliography[heading=secbib]
