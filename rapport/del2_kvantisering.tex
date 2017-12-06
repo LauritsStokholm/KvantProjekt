@@ -1,33 +1,26 @@
-\section{Kvantisering}
-Vi betragter ny systemet klassisk, hvor $E > V(x) \forall x$. Vi siger nu at vores bølgefunktion kun må eksistere på x-intervallet [a,b], hvilket medfører at vores sandsynlighedstæthed skal være 0 udenfor dette interval, altså $|\psi|^2 = 0$. Dette medfører at $\psi = 0$
-Ser vi på bølgefunktionen fra WKB approximationen, $\psi$, ser vi at vi kan skrive den som to dele:
+\section{Potentialebrønd med vertikale vægge}
+Lad os betragte det klassiske system, $E > V(x) \ \forall x \in[a,b]$, hvor intervallet $[a,b]$ er det begrænsede interval med $a$ og $b$ som klassiske vendepunkter. Heri eksisterer bølgefunktionen $\psi(x)$, ækvivalent til en brønd med vertikale vægge. Lad $|\psi(a)|^{2} = 0 = |\psi(b)|^{2}$. Fra \cref{eqpsi} vil man kunne skrive $\psi(x)$ som en sum af hhv. negativ og positiv eksponent.
 
 \begin{equation}
-  \psi(x) \cong \frac{1}{\sqrt{p(x)}}\left[C_1e^{i\phi(x)}+C_2e^{-i\phi(x)}\right]
+    \psi(x) \cong \frac{1}{\sqrt{p(x)}}\left[C_{+}e^{i\phi(x)}+C_{-}e^{-i\phi(x)}\right].
   \label{eq:kvantiseringStart}
 \end{equation}
-
-Her ses det at vi kan skrive dette om, ved at definere to nye konstanter, $C_3 \equiv i(C_1-C_2)$ og $C_4 \equiv C_1+C_2$.
-
-
+Ved at definere to nye konstanter, $C_1 \equiv i(C_{+}-C_{-})$ og $C_2 \equiv C_{+}+C_{-}$, kan dette ved brug af eulers identitet skrives om til
 \begin{equation}
   \psi(x) = \frac{1}{\sqrt{p(x)}}
-  \Bigl[    C_3\sin{\phi(x)}+C_4\cos{\phi(x)}   \Bigr]
+  \Bigl[    C_1\sin{\phi(x)} + C_2\cos{\phi(x)}   \Bigr].
   \label{eq:kvantiseringSinCos}
 \end{equation}
-Hvor det gælder at $\phi(x) = \frac{1}{\hbar}\int p(x) dx$. Nu sætter vi grænserne til at være fra $a$ til $x$, hvor a er det ene klassiske vendepunkt så vi får
+Her gælder det, at $\phi(x) = \frac{1}{\hbar}\int p(x) dx$. Integreres over intervallet $[a, x]$, vil
 \begin{equation}
-  \phi(x) = \frac{1}{\hbar}\int_{a}^{x} p(x')dx'
+  \phi(x) = \frac{1}{\hbar}\int_{a}^{x} p(x')dx'.
 \end{equation}
-Her kræves det blot at $\psi(a) = \psi(b) = 0$, hvilket giver os at $C_4 = 0$. Da $\phi(a) = 0$ får vi ved at sætte $\psi(a) = 0$ at $C_4$ skal være 0, da cosinus leddet ikke går i 0.
-Nu har vi altså at
+Fra startbetingelsen kræves at $\psi(a) = 0 = \psi(b)$. Da\footnote{Dette kan nemt ses, ved at integrere fra og til $a$} $\phi(a) = 0$, må $C_2$ være 0, $\cos(0)\neq 0$. Dette medfører at,
 \begin{equation}
-  \psi(x) = \frac{1}{\sqrt{p(x)}}C_3\sin{\phi(x)}
+    \psi(x) = \frac{1}{\sqrt{p(x)}}C_1\sin{\phi(x)}.
 \end{equation}
-
-Nu skal det stadig gælde at $\psi(b) = 0$, altså må dette betyde at $sin(\phi(b)) = 0$ hvilket medfører at $\phi(b) = n'\pi$, hvor $n' = 0,1,2...$.
-Dette giver os altså at
-
+Nu skal det stadig gælde at $\psi(b) = 0$, og da $C_1\neq 0$\footnote{Dette er en ikke normerbar løsning, og en ret kedelig en af slagsen.}, må det altså betyde at $\sin(\phi(b)) = 0$, hvilket medfører at $\phi(b) = n'\pi$, hvor $n' = 0, 1, 2\ldots$.
+Resultatet bliver
 \begin{equation}
   \int_{a}^{b} p(x) dx = n'\pi\hbar
   \label{eq:kvantiDone}
