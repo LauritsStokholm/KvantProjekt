@@ -22,7 +22,7 @@ Nu kan $\pdiff[2]{\psi(x)}{x}$ bestemmes. For overskueligheden lader vi $A'(x) =
     \label{eq:regime}
 \end{align}
 Hvor sidste udtryk kommer fra \cref{eq:schrodingerligning} sammensat med \cref{eq:ansatz}.
-Denne andenordens differentialligning kan opdeles i sin real-- og imaginærdel. Desuden kan det udnyttes, at $\left( A(x)^2\phi'(x) \right)' = 2A'(x)\phi'(x) + A^2(x)\phi''(x)$, hvorfor 
+Denne andenordens differentialligning kan opdeles i sin real-- og imaginærdel. Desuden kan det udnyttes, at $\left( A(x)^2\phi'(x) \right)' = 2A'(x)\phi'(x) + A^2(x)\phi''(x)$, hvorfor
 
 \begin{align}
     \overbrace{A''(x) - A(x)\left( \phi'(x) \right)^{2} = - \frac{p^{2}}{\hbar^{2}}A(x)}^{\text{Realdel}} \quad \text{og} \quad%
@@ -35,7 +35,7 @@ Heraf ses det fra den imaginære del, at det indre i parentesen er konstant, hvo
     & \Leftrightarrow  \quad A(x) = \frac{C}{\sqrt{\phi'(x)}}
     \label{eq:konst}
 \end{align}
-Desuden, ved at defineres $k(x) = \frac{p(x)}{\hbar}$, kan realdelen omskrives. Indtil videre er der regnet eksakt, men denne del af differentialligning er svær at løse. Derfor antages $A$ som værende langsomt varierende, hvorfor krumningen $A''(x)\ll 1$ og kan derfornegligeres. Specielt er $\frac{A''(x)}{A(x)} \ll \phi'(x)^{2}\wedge \frac{p^{2}}{\hbar^{2}}$
+Desuden, ved at defineres $k(x) = \frac{p(x)}{\hbar}$, kan realdelen omskrives. Indtil videre er der regnet eksakt, men denne del af differentialligning er svær at løse. Derfor antages $A$ som værende langsomt varierende, hvorfor krumningen $A''(x)\ll 1$ og kan derfor negligeres. Specielt er $\frac{A''(x)}{A(x)} \ll \phi'(x)^{2}\wedge \frac{p^{2}}{\hbar^{2}}$
 \begin{align}
     A''(x) - A(x)(\phi'(x))^{2} & =  -k(x)^{2}A(x)\\
     \Leftrightarrow \frac{A''(x)}{A(x)} & = -k(x)^{2} + (\phi'(x))^{2} = 0 \\
@@ -44,7 +44,7 @@ Desuden, ved at defineres $k(x) = \frac{p(x)}{\hbar}$, kan realdelen omskrives. 
 \end{align}
 hvorfor $\phi = \pm \frac{1}{\hbar}\int p(x) dx$. Disse resultater fra \cref{eq:konst} og \cref{eq:ho} indsættes \cref{eq:ansatz}
 \begin{align}
-    \psi(x) = \frac{C}{\sqrt{\phi'(x)}}e^{\pm i\frac{1}{\hbar}\int p(x) dx} 
+    \psi(x) = \frac{C}{\sqrt{\phi'(x)}}e^{\pm i\frac{1}{\hbar}\int p(x) dx}
     \label{eqpsi}
 \end{align}
 hvorfor $|\psi(x)|^2 \approx \frac{|C|^2}{\phi'(x)}$, omvendt proportional med den klassiske impuls.
