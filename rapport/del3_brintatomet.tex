@@ -87,7 +87,58 @@ Og hvis vi husker på at $E = -\varepsilon Ry$, så kan vi skrives
   E_{n',l} = \frac{-Ry}{\Bigl[n'+l(l+1)  \Bigr]^2}
 \end{equation}
 
+Nu kigger vi på den asymptotiske form for bølgefunktionerne ved store $r$.
+I det eksakte tilfælde er de på formen
+\begin{equation}
+  R_{nl}(r) \sim \left(\frac{r}{a_0}\right)^{n-1}e^{-r/na_0}
+\end{equation}
 
+For at finde dem i WKB tilfældet kigger vi allerførst på formen af en sådan bølgefunktion. Det kan vises at den er på formen %TODO find formen her
+\begin{equation}
+  u(r) \sim exp\Bigl[-\int_{a_0}^{r}k(r')dr'\Bigr]
+\end{equation}
+Først kigges der på $k(r)$ da vi gerne vil lave en rækkeudvikling da vi kun kigger på meget store $r$.
+Vi har altså at
+\begin{equation}
+  k(r) = \frac{\sqrt{\varepsilon}}{a_0}\frac{1}{r}\sqrt{(r-a)(r-b)}
+\end{equation}
+Her lader vi $\frac{1}{r}$ gå ind under kvadratroden og vi får
+\begin{align}
+  k(r) = & \frac{\sqrt{\varepsilon}}{a_0}\sqrt{(1-\frac{a}{r})(1-\frac{b}{r})}\\
+       = & \frac{\sqrt{\varepsilon}}{a_0}\sqrt{1-\frac{a+b}{r}+\frac{ab}{r^2}}
+\end{align}
+Her beholder vi kun til første orden og vi får altså noget som vi kan rækkeudvikle ved den sædvanelige kvadratrods række.
+\begin{align}
+  k(r) \approx & \frac{\sqrt{\varepsilon}}{a_0}\sqrt{1-\frac{a+b}{r}}\\
+       = & \frac{\sqrt{\varepsilon}}{a_0}(1-\frac{1}{2}\frac{a+b}{r})
+\end{align}
+Husker vi på $a+b = \frac{2a_0}{\varepsilon}$ så får vi
+\begin{equation}
+  k(r) = \frac{\sqrt{\varepsilon}}{a_0}-\frac{1}{\sqrt{\varepsilon}r}
+\end{equation}
+\\
+Kigger vi da på integralet har vi at
+\begin{align}
+  \int_{a_0}^{r}k(r')dr' = & \frac{\sqrt{\varepsilon}}{a_0}(r-a_0) - \frac{1}{\sqrt{\varepsilon}}\left(\ln{r}-\ln{a_0}\right)\\
+  = & \frac{\sqrt{\varepsilon}}{a_0}(r-a_0) - \ln{((\frac{r}{a_0})^{\frac{1}{\sqrt{\varepsilon}}})}
+\end{align}
+
+Så nu kan vi altså skrive vores $u(r)$ op som
+\begin{align}
+  u(r) \sim & \exp\left[-\frac{\sqrt{\varepsilon}}{a_0}(r-a_0) + \ln{((\frac{r}{a_0})^{\frac{1}{\sqrt{\varepsilon}}})}\right]\\
+        = & \exp\left[-\frac{\sqrt{\varepsilon}}{a_0}(r-a_0)\right] + (\frac{r}{a_0})^{\frac{1}{\sqrt{\varepsilon}}}\\
+        = & \exp\left[\sqrt{\varepsilon}(1-\frac{r}{a_0})\right] + (\frac{r}{a_0})^{\frac{1}{\sqrt{\varepsilon}}}
+\end{align}
+Nu bruges det blot at
+\begin{equation}
+  \varepsilon = \frac{1}{\left[n'+\sqrt{l(l+1)}\right]^2}
+\end{equation}
+Og det giver os altså at
+\begin{equation}
+  u(r) \sim e^{\left[\frac{1-\frac{r}{a_0}}{n'+\sqrt{l(l+1)}}\right]}{\left(\frac{r}{a_0}\right)}^{\left[n'+\sqrt{l(l+1)}\right]}
+\end{equation}
+
+%TODO kommenter det her resultat og sammenlign
 
 Plottes $V_{\text{eff}}$
 
