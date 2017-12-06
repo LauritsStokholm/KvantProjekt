@@ -1,118 +1,102 @@
 \section{WKB approksimation i brug ved Schrödingerligningen}
-Antages, at der betragtes en partikel i en dimension, $x$,  er Schrödinger ligningen
+I dette afsnit vil vi betragte Schrödingerligningen for en partikel i én dimension. Introduceres den klassiske impuls, som er givet ved $p(x) = \sqrt{2m(E-V(x)}$, kan man omskrive ligningen.
 %
-\begin{equation}
-    \frac{\hbar^2}{2m}\frac{\partial^2 \psi}{\partial x^2} + V(x) \psi = E \psi
-    \label{eq:scrodingerLigning1}
-\end{equation}
-%
-isoleres $\frac{\partial^2 \psi}{\partial x^2}$ i \cref{eq:scrodingerLigning1}, opnås
+\begin{align}
+    & \frac{\hbar^2}{2m} \pdiff[2]{\psi(x)}{x} + V(x)\psi(x) = E\psi(x) \\
+    & \pdiff[2]{\psi(x)}{x} = \frac{2m}{\hbar^2}\psi(x)(E - V(x))  = \pdiff[2]{\psi(x)}{x} = - \frac{p(x)^2}{\hbar^2}\psi(x).
+    \label{eq:schrodingerligning}
+\end{align}
 
-\begin{equation}
-    \frac{\partial^2 \psi}{\partial x^2} = 2m\psi (E  - V(x)) \frac{1}{\hbar^2}
-    \label{eq:scrodingerLigning2}
-\end{equation}
-
-defineres $p(x)$ klassisk
-
-\begin{equation}
-p(x) \equiv \sqrt{2m(E-V(x))}
-\end{equation}
-Kan \cref{eq:scrodingerLigning2} omskrives til
-
-\begin{equation}
-    \frac{\partial^2 \psi}{\partial x^2} = - \frac{p(x)^2}{\hbar^2} \psi.
-    \label{eq:scrodingerLigning3}
-\end{equation}
-
-Anvendes ansatzen
-
+Det er kendt, at $\psi(x) \in \mathbb{C}$ er en kompleksfunktion som kan skrives som et produkt af en reel amplitude, $A \in \mathbb{R}$ og en kompleks eksponential med reel fase $\phi(x)\in \mathbb{R}$. Derfor anvendes nu ansatzen. 
 \begin{equation}
     \psi(x) = A(x) e^{i \phi(x)}
     \label{eq:ansatz}
 \end{equation}
-
-hvor $\psi (x) \in \mathbb{C}$. Antages
-
-\begin{equation}
- E > V(x) \forall x
-\end{equation}
-
-Er $A(x)$ en reel amplitude og $\phi(x)$ er en reel fase. Dette kan altid gøres, der man ved hjælp af ledet  $e^{i \phi(x)} $. Dette led danner en vektor $ \in \mathbb{C}$ med normen 1. Herefter kan $A(x)$  skalere vektoren, til at ramme alle punkter. Anvendes venstre side af \cref{eq:scrodingerLigning3} på \cref{eq:ansatz} fås
-
-\begin{equation}
-    \frac{\partial \psi}{\partial x} = \left(i A{\left (x \right )} \frac{d}{d x} \phi{\left (x \right )} + \frac{d}{d x} A{\left (x \right )}\right) e^{i \phi{\left (x \right )}}
-    \label{eq:diff1gange}
-\end{equation}
-
+Lad $E > V(x) \ \forall x$, hvilket svarer til et klassisk regime.
+Nu kan $\pdiff[2]{\psi(x)}{x}$ bestemmes. For overskueligheden lader vi $A'(x) = \pdiff{A}{x}$, og så fremdeles af højere ordens led.
 \begin{align}
-    \frac{\partial^2 \psi}{\partial x^2} = \left(- A{\left (x \right )} \left(\frac{d}{d x} \phi{\left (x \right )}\right)^{2} + i A{\left (x \right )} \frac{d^{2}}{d x^{2}}  \phi{\left (x \right )} + 2 i \frac{d}{d x} A{\left (x \right )} \frac{d}{d x} \phi{\left (x \right )} + \frac{d^{2}}{d x^{2}}  A{\left (x \right )}\right) e^{i \phi{\left (x \right )}}
-    \label{eq:diff2gange}
+    \pdiff[2]{\psi(x)}{x} = & \pdiff{}{x}\left( \left[ A'(x) + A(x)i\phi'(x) \right]e^{i\phi(x)} \right) \\
+    = & \left[ A''(x) + A'(x)i\phi'(x) + A'(x)i\phi'(x) + A(x)i\phi''(x) - A(x)( \phi'(x))^2\right]e^{i\phi(x)} \\
+    = & \left(\left[ A''(x) - A(x)(\phi'(x))^2\right] + i \left[2A'(x)\phi'(x) + A(x)\phi''(x) \right]\right)e^{i\phi(x)}\\
+    = & -\frac{p^2}{\hbar^2}\psi(x) = -\frac{p^2}{\hbar^2} A(x)e^{i\phi(x)}
+    \label{eq:regime}
+\end{align}
+Hvor sidste udtryk kommer fra \cref{eq:schrodingerligning} sammensat med \cref{eq:ansatz}.
+Denne andenordens differentialligning kan opdeles i sin real-- og imaginærdel. Desuden kan det udnyttes, at $\left( A(x)^2\phi'(x) \right)' = 2A'(x)\phi'(x) - A^2(x)\phi''(x)$, hvorfor
+\begin{align}
+    \overtextA''(x) - A(x)(\phi'(x))^2 = & -\frac{p^2}{\hbar^2}A(x)\\
+    abc
+    \label{abcde}
 \end{align}
 
-Dette må også være lig med højre side af \cref{eq:scrodingerLigning3}. Substitueres udtrykket for $\psi$ fra \cref{eq:ansatz} kan \cref{eq:diff2gange} reduceres til
-
-\begin{align}
-    \left(- A{\left (x \right )} \left(\frac{d}{d x} \phi{\left (x \right )}\right)^{2} + i A{\left (x \right )} \frac{d^{2}}{d x^{2}}  \phi{\left (x \right )} + 2 i \frac{d}{d x} A{\left (x \right )} \frac{d}{d x} \phi{\left (x \right )} + \frac{d^{2}}{d x^{2}}  A{\left (x \right )}\right) e^{i \phi{\left (x \right )}} = - \frac{p^2}{\hbar^2} \psi = - \frac{p(x)^2}{\hbar^2} A(x) e^{i \phi(x)}
-    \label{eq:udskrevet}
-\end{align}
-
-\begin{equation}
-     \Rightarrow - A{\left(x \right)} \left(\frac{d}{d x} \phi{\left(x \right)}\right)^{2} + i A{\left(x \right)} \frac{d^{2}}{d x^{2}}  \phi{\left(x \right)} + 2 i \frac{d}{d x} A{\left(x \right)} \frac{d}{d x} \phi{\left (x \right )} + \frac{d^{2}}{d x^{2}}  A{\left (x \right )}
-     = - \frac{p(x)^2}{\hbar^2} A(x)
-     \label{eq:ReOgIm}
-\end{equation}
-
-Sorteres venstre side af \cref{eq:ReOgIm} real delen og imaginær delen fås henholdsvis
-
-\begin{equation}
-    A{\left (x \right )} \left(\frac{d}{d x} \phi{\left (x \right )}\right)^{2}  + \frac{d^{2}}{d x^{2}}  A{\left (x \right )}
-    = - \frac{p(x)^2}{\hbar^2} A(x)
-    \label{eq:Re}
-\end{equation}
-
-\begin{equation}
-    i A{\left (x \right )} \frac{d^{2}}{d x^{2}}  \phi{\left (x \right )} + 2 i \frac{d}{d x} A{\left (x \right )} \frac{d}{d x} \phi{\left (x \right )}
-    = - \frac{p(x)^2}{\hbar^2} A(x)
-    \label{eq:Im}
-\end{equation}
-
-Af disse kan\cref{eq:Im}  løses, løsningen er: % er det rigtigt? Hvorfor er der ingen løsning i Realdelen
-
-\begin{equation}
-    A(x) = \frac{C}{\sqrt{(\frac{d}{d x} \phi{\left (x \right )})}}.
-    \label{eq:ImLoes}
-\end{equation}
-
-Hvor C er en konstant. Der eksisterer ingen løsninger til \cref{eq:Re}, og derfor foretages en approximation, ved blot at droppe $\frac{d^{2}}{d x^{2}}  A{\left (x \right )}$ leddet i samme ligning. Dette er en god approixmation, hvis $A(x)$ varier langsomt. Da kan \cref{eq:Re} omskrives til
-
-\begin{equation}
-    \left(\frac{d}{d x} \phi{\left (x \right )}\right)^{2}
-    = - \frac{p(x)^2}{\hbar^2}
-    \label{eq:ReApprox}
-\end{equation}
-
-\begin{equation}
-    \Rightarrow \frac{d}{d x} \phi{\left (x \right )}
-    = \pm \frac{p(x)}{\hbar}
-    \label{eq:ReApproxFinal}
-\end{equation}
-
-Hvis der integreres med hensyn til x findes
-
-\begin{equation}
-    \phi(x) = \pm \frac{1}{\hbar} \int p(x) dx
-    \label{wq:thisPhi}
-\end{equation}
-
-Substitueres $A(x)$ fra \cref{eq:ImLoes} og udtrykket for $\frac{d}{d x} \phi{\left (x \right )}$ fra \cref{eq:ReApproxFinal}  ind i ansatzen fra \cref{eq:ansatz} findes
-
-\begin{equation}
-    \psi(x) = A(x) e^{i \phi(x)} \cong
-    \frac{C}{\sqrt{(\frac{d}{d x} \phi{\left (x \right )})}} e^{\phi(x)} \cong
-    \frac{C}{\sqrt{\frac{p(x)}{\hbar}}} e^{\pm \frac{1}{\hbar} \int p(x) dx} \cong
-    \frac{C'}{\sqrt{p(x)}} e^{\pm \frac{1}{\hbar} \int p(x) dx}
-    \label{eq:final}
-\end{equation}
-
-Hvor $C'$ er en ny konstant, der indeholder $\hbar$ og evt. andre konstanter fra integralet. Dette er det endelige udtryk for aproximationen. Løsningen ville da være en linear kombination af den positive og negative del.
+%\begin{align}
+%    \frac{\pdiff[2]{ \psi}{\partial x^2} = \left(- A{\left (x \right )} \left(\frac{d}{d x} \phi{\left (x \right )}\right)^{2} + i A{\left (x \right )} \frac{d^{2}}{d x^{2}}  \phi{\left (x \right )} + 2 i \frac{d}{d x} A{\left (x \right )} \frac{d}{d x} \phi{\left (x \right )} + \frac{d^{2}}{d x^{2}}  A{\left (x \right )}\right) e^{i \phi{\left (x \right )}}
+%    \label{eq:diff2gange}
+%\end{align}
+%
+%Dette må også være lig med højre side af \cref{eq:scrodingerLigning3}. Substitueres udtrykket for $\psi$ fra \cref{eq:ansatz} kan \cref{eq:diff2gange} reduceres til
+%
+%\begin{align}
+%    \left(- A{\left (x \right )} \left(\frac{d}{d x} \phi{\left (x \right )}\right)^{2} + i A{\left (x \right )} \frac{d^{2}}{d x^{2}}  \phi{\left (x \right )} + 2 i \frac{d}{d x} A{\left (x \right )} \frac{d}{d x} \phi{\left (x \right )} + \frac{d^{2}}{d x^{2}}  A{\left (x \right )}\right) e^{i \phi{\left (x \right )}} = - \frac{p^2}{\hbar^2} \psi = - \frac{p(x)^2}{\hbar^2} A(x) e^{i \phi(x)}
+%    \label{eq:udskrevet}
+%\end{align}
+%
+%\begin{equation}
+%     \Rightarrow - A{\left(x \right)} \left(\frac{d}{d x} \phi{\left(x \right)}\right)^{2} + i A{\left(x \right)} \frac{d^{2}}{d x^{2}}  \phi{\left(x \right)} + 2 i \frac{d}{d x} A{\left(x \right)} \frac{d}{d x} \phi{\left (x \right )} + \frac{d^{2}}{d x^{2}}  A{\left (x \right )}
+%     = - \frac{p(x)^2}{\hbar^2} A(x)
+%     \label{eq:ReOgIm}
+%\end{equation}
+%
+%Sorteres venstre side af \cref{eq:ReOgIm} real delen og imaginær delen fås henholdsvis
+%
+%\begin{equation}
+%    A{\left (x \right )} \left(\frac{d}{d x} \phi{\left (x \right )}\right)^{2}  + \frac{d^{2}}{d x^{2}}  A{\left (x \right )}
+%    = - \frac{p(x)^2}{\hbar^2} A(x)
+%    \label{eq:Re}
+%\end{equation}
+%
+%\begin{equation}
+%    i A{\left (x \right )} \frac{d^{2}}{d x^{2}}  \phi{\left (x \right )} + 2 i \frac{d}{d x} A{\left (x \right )} \frac{d}{d x} \phi{\left (x \right )}
+%    = - \frac{p(x)^2}{\hbar^2} A(x)
+%    \label{eq:Im}
+%\end{equation}
+%
+%Af disse kan\cref{eq:Im}  løses, løsningen er: % er det rigtigt? Hvorfor er der ingen løsning i Realdelen
+%
+%\begin{equation}
+%    A(x) = \frac{C}{\sqrt{(\frac{d}{d x} \phi{\left (x \right )})}}.
+%    \label{eq:ImLoes}
+%\end{equation}
+%
+%Hvor C er en konstant. Der eksisterer ingen løsninger til \cref{eq:Re}, og derfor foretages en approximation, ved blot at droppe $\frac{d^{2}}{d x^{2}}  A{\left (x \right )}$ leddet i samme ligning. Dette er en god approixmation, hvis $A(x)$ varier langsomt. Da kan \cref{eq:Re} omskrives til
+%
+%\begin{equation}
+%    \left(\frac{d}{d x} \phi{\left (x \right )}\right)^{2}
+%    = - \frac{p(x)^2}{\hbar^2}
+%    \label{eq:ReApprox}
+%\end{equation}
+%
+%\begin{equation}
+%    \Rightarrow \frac{d}{d x} \phi{\left (x \right )}
+%    = \pm \frac{p(x)}{\hbar}
+%    \label{eq:ReApproxFinal}
+%\end{equation}
+%
+%Hvis der integreres med hensyn til x findes
+%
+%\begin{equation}
+%    \phi(x) = \pm \frac{1}{\hbar} \int p(x) dx
+%    \label{wq:thisPhi}
+%\end{equation}
+%
+%Substitueres $A(x)$ fra \cref{eq:ImLoes} og udtrykket for $\frac{d}{d x} \phi{\left (x \right )}$ fra \cref{eq:ReApproxFinal}  ind i ansatzen fra \cref{eq:ansatz} findes
+%
+%\begin{equation}
+%    \psi(x) = A(x) e^{i \phi(x)} \cong
+%    \frac{C}{\sqrt{(\frac{d}{d x} \phi{\left (x \right )})}} e^{\phi(x)} \cong
+%    \frac{C}{\sqrt{\frac{p(x)}{\hbar}}} e^{\pm \frac{1}{\hbar} \int p(x) dx} \cong
+%    \frac{C'}{\sqrt{p(x)}} e^{\pm \frac{1}{\hbar} \int p(x) dx}
+%    \label{eq:final}
+%\end{equation}
+%
+%Hvor $C'$ er en ny konstant, der indeholder $\hbar$ og evt. andre konstanter fra integralet. Dette er det endelige udtryk for aproximationen. Løsningen ville da være en linear kombination af den positive og negative del.
