@@ -83,6 +83,7 @@ Nu kigger vi på den asymptotiske form for bølgefunktionerne ved store $r$.
 I det eksakte tilfælde er de på formen
 \begin{equation}
   R_{nl}(r) \sim \left(\frac{r}{a_0}\right)^{n-1}e^{-r/na_0}
+  \label{eq:eksatR}
 \end{equation}
 
 For at finde dem i WKB tilfældet kigges først på formen af en sådan bølgefunktion. Det kan vises at den er på formen %TODO find formen her
@@ -128,11 +129,12 @@ Og det giver os altså at
 \begin{equation}
   u(r) \sim {\left(\frac{r}{a_0}\right)}^{\left[n'+\sqrt{l(l+1)}\right]} e^{\left[\frac{1-\frac{r}{a_0}}{n'+\sqrt{l(l+1)}}\right]}
 \end{equation}
-Dette giver os også at $R(r) = u(r)/r$ bliver
+Derved bliver $R(r) = u(r)/r$
 \begin{equation}
   R(r) = \frac{1}{a_0}{\left(\frac{r}{a_0}\right)}^{\left[n'-1+\sqrt{l(l+1)}\right]} e^{\left[\frac{1-\frac{r}{a_0}}{n'+\sqrt{l(l+1)}}\right]}
+  \label{eq:rAfR}
 \end{equation}
-
+Dette giver anledning til en sammenligning mellem \cfef{eq:eksatR} og \cref{eq:rAfR}. Det ses at vi i begge udtryk har to led: et polynomielt led og et eksponentielt led. WKB approksimationen har dog taget højde for kvantetallet $l$ hvilket den eksakte løsning ikke har, hvilket ses
 
 \begin{figure}[h!]
     \centering
