@@ -46,7 +46,7 @@ For at det nu skal passe i vores udtryk for $k(r)$ tjekkes det om
 $a+b$ leddet er oplagt, mens $ab$ leddet bliver
 \begin{align}
   ab = & \frac{a_0^2}{\varepsilon^2}\Bigl(1-\sqrt{1-\varepsilon l(l+1)} \Bigr)\Bigl(1+\sqrt{1-\varepsilon l(l+1)} \Bigr)\\
-     = & \frac{a_0^2}{\varepsilon^2}\Bigl(1-(1-\varepsilon l(l+1)) \Bigr) =  \frac{a_0^2}{\varepsilon^2} \varepsilon l(l+1)
+  = & \frac{a_0^2}{\varepsilon^2}\Bigl(1-(1-\varepsilon l(l+1)) \Bigr) =  \frac{a_0^2}{\varepsilon^2} \varepsilon l(l+1)
      = \frac{a_0^2}{\varepsilon} l(l+1).
 \end{align}
 %
@@ -69,26 +69,27 @@ Ved at isolere for $n'$, og indsætte værdierne for de klassiske vendepunkter f
      = & \frac{\sqrt{\varepsilon}}{2a_0}\Bigl(\frac{2a_0}{\varepsilon}-2a_0\sqrt{\frac{1}{\varepsilon}l(l+1)}\Bigr)\\
      = & \frac{1}{\sqrt{\varepsilon}} -l(l+1).
 \end{align}
-Herfra finder vi $\varepsilon$ til at være,
+Herfra finder vi $\varepsilon$ til at være
 \begin{equation}
     \varepsilon = \frac{1}{\Bigl[n'+l(l+1)  \Bigr]^2}.
 \end{equation}
 Da $E = -\varepsilon \mathrm{Ry}$, kan det skrives
 \begin{equation}
-    E_{n',l} = \frac{-\mathrm{Ry}}{\Bigl[n'+l(l+1)  \Bigr]^2},
+    E_{n'l} = \frac{-\mathrm{Ry}}{\Bigl[n'+l(l+1)  \Bigr]^2},
     \label{eq:energifinale}
 \end{equation}
 hvilket nu viser at energien er afhængig af både $n'$ og $l$. Dette er forskelligt fra den kendte teori, hvor energien blot afhænger af det primære kvantetal. En sammenligning mellem de eksakte- og de approksimerede løsninger til brints energiniveauer, kan ses på \cref{fig:hydrogen}. Som forventet vil WKB-metoden være eksakt såfremt $l=0$. Dog vil der fra WKB-metoden også være energiniveauer, som er mellem to eksakte løsninger for $l\neq 0$. Det fremstår at WKB-metoden ikke altid er god, men for $n'\gg l$, vil WKB-metoden tilnærme sig de eksakte løsninger, da $n'$ dominerer i \cref{eq:energifinale}.
 
-Lad os nu se på den asymptotiske form for bølgefunktioner ved $r\gg a_0$. Det kan vises, at de i det eksakte tilfælde er på formen
+Lad os nu se på den asymptotiske form for brints bølgefunktioner ved $r\gg a_0$. Det kan vises, at de i det eksakte tilfælde er på formen
 \begin{equation}
     R_{nl}(r) \sim \left(\frac{r}{a_0}\right)^{n-1}e^{-r/na_0}.
-  \label{eq:eksatR}
+  \label{eq:eksaktR}
 \end{equation}
 %
 For at bestemme værdierne af $R_{n'l}$ ved WKB-metoden betragtes først $u(r)$, som kan vises at være på formen
 \begin{equation}
-    u(r) \sim exp\Bigl[-\int_{a_0}^{r}k(r')dr'\Bigr].
+    u(r) \sim \exp\Bigl[-\int_{a_0}^{r}k(r')dr'\Bigr].
+    \label{rasmusvilhaveetintegrale}
 \end{equation}
 For at løse integralet, må vi først betragte $k(r)$ for store værdier af $r$, hvorfor det rækkeudvikles. Det er tidligere fundet, at
 \begin{equation}
@@ -108,40 +109,40 @@ Da $a+b = \frac{2a_0}{\varepsilon}$ får vi:
   k(r) = \frac{\sqrt{\varepsilon}}{a_0}-\frac{1}{\sqrt{\varepsilon}r}.
 \end{equation}
 \\
-Kigger vi da på integralet har vi at
+Kigger vi da på integralet fra \cref{rasmusvilhaveetintegrale}, har vi at
 \begin{align}
     \int_{a_0}^{r}k(r')dr' = \int_{a_0}^{r} \frac{\sqrt{\varepsilon}}{a_0}-\frac{1}{\sqrt{\varepsilon}r'} dr'= 
 & \frac{\sqrt{\varepsilon}}{a_0}(r-a_0) - \frac{1}{\sqrt{\varepsilon}}\left(\ln{r}-\ln{a_0}\right)\\
-  = & \frac{\sqrt{\varepsilon}}{a_0}(r-a_0) - \ln{((\frac{r}{a_0})^{\frac{1}{\sqrt{\varepsilon}}})}
+= & \frac{\sqrt{\varepsilon}}{a_0}(r-a_0) - \ln{((\frac{r}{a_0})^{\frac{1}{\sqrt{\varepsilon}}})}.
 \end{align}
 %
 Så nu kan vi altså skrive vores $u(r)$ op som
 \begin{align}
   u(r) \sim & \exp\left[-\frac{\sqrt{\varepsilon}}{a_0}(r-a_0) + \ln{((\frac{r}{a_0})^{\frac{1}{\sqrt{\varepsilon}}})}\right]\\
         = & \exp\left[-\frac{\sqrt{\varepsilon}}{a_0}(r-a_0)\right] {\left(\frac{r}{a_0}\right)}^{\frac{1}{\sqrt{\varepsilon}}}\\
-    = & \exp\left[\sqrt{\varepsilon}(1-\frac{r}{a_0})\right] {\left(\frac{r}{a_0}\right)}^{\frac{1}{\sqrt{\varepsilon}}}
+        = & \exp\left[\sqrt{\varepsilon}(1-\frac{r}{a_0})\right] {\left(\frac{r}{a_0}\right)}^{\frac{1}{\sqrt{\varepsilon}}}.
 \end{align}
 Nu bruges det blot at
 \begin{equation}
-  \varepsilon = \frac{1}{\left[n'+\sqrt{l(l+1)}\right]^2}
+    \varepsilon = \frac{1}{\left[n'+\sqrt{l(l+1)}\right]^2},
 \end{equation}
-Og det giver os altså at
+og det giver os altså at
 \begin{equation}
-  u(r) \sim {\left(\frac{r}{a_0}\right)}^{\left[n'+\sqrt{l(l+1)}\right]} e^{\left[\frac{1-\frac{r}{a_0}}{n'+\sqrt{l(l+1)}}\right]}
+    u(r) \sim {\left(\frac{r}{a_0}\right)}^{\left[n'+\sqrt{l(l+1)}\right]} e^{\left[\frac{1-\frac{r}{a_0}}{n'+\sqrt{l(l+1)}}\right]}.
 \end{equation}
-Derved bliver $R(r) = u(r)/r$
+Derved bliver $R_{n'l}(r) = u(r)/r$
 \begin{equation}
-  R(r) = \frac{1}{a_0}{\left(\frac{r}{a_0}\right)}^{\left[n'-1+\sqrt{l(l+1)}\right]} e^{\left[\frac{1-\frac{r}{a_0}}{n'+\sqrt{l(l+1)}}\right]}
+    R_{n'l}(r) = \frac{1}{a_0}{\left(\frac{r}{a_0}\right)}^{\left[n'-1+\sqrt{l(l+1)}\right]} e^{\left[\frac{1-\frac{r}{a_0}}{n'+\sqrt{l(l+1)}}\right]}.
   \label{eq:rAfR}
 \end{equation}
-Dette giver anledning til en sammenligning mellem \cref{eq:eksatR} og \cref{eq:rAfR}. Det ses at vi i begge udtryk har to led: et polynomielt led og et eksponentielt led. WKB approksimationen har dog taget højde for kvantetallet $l$ hvilket den eksakte løsning ikke har, hvilket ses
+Dette giver anledning til en sammenligning mellem de eksakte-  og de approksimerede løsninger (se hhv. \cref{eq:eksaktR} og \cref{eq:rAfR}). Begge udtryk er et produkt af to led: et polynomielt- og et eksponentielt led. WKB approksimationen tager dog højde for kvantetallet $l$, hvad den eksakte løsning ikke gør. Det ses at begge led går mod $0$ for store $r$, hvorfor WKB-metoden har god overenstemmelse med den eksakte løsning for store $r$.
 
 \begin{figure}[h!]
     \centering
     \begin{subfigure}{0.45\columnwidth}
         \centering
         \includegraphics[width=\columnwidth]{energyPlot}
-        \caption{Hydrogen}
+        \caption{Her ses energiniveauerne for hydrogen ved $n, n'\in[2, 8]$. Første kolonne viser de eksakte løsninger og de resterende kolonner viser WKB-metodens løsninger ved forskellige værdier af $l$.} 
         \label{fig:hydrogen}
     \end{subfigure}
     \begin{subfigure}{0.45\columnwidth}
@@ -153,6 +154,3 @@ Dette giver anledning til en sammenligning mellem \cref{eq:eksatR} og \cref{eq:r
     \caption{Figurer}
     \label{bigfig}
 \end{figure}
-
-
-%
