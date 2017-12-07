@@ -115,7 +115,7 @@ Kigger vi da på integralet har vi at
   \int_{a_0}^{r}k(r')dr' = & \frac{\sqrt{\varepsilon}}{a_0}(r-a_0) - \frac{1}{\sqrt{\varepsilon}}\left(\ln{r}-\ln{a_0}\right)\\
   = & \frac{\sqrt{\varepsilon}}{a_0}(r-a_0) - \ln{((\frac{r}{a_0})^{\frac{1}{\sqrt{\varepsilon}}})}
 \end{align}
-
+%
 Så nu kan vi altså skrive vores $u(r)$ op som
 \begin{align}
   u(r) \sim & \exp\left[-\frac{\sqrt{\varepsilon}}{a_0}(r-a_0) + \ln{((\frac{r}{a_0})^{\frac{1}{\sqrt{\varepsilon}}})}\right]\\
@@ -130,10 +130,11 @@ Og det giver os altså at
 \begin{equation}
   u(r) \sim {\left(\frac{r}{a_0}\right)}^{\left[n'+\sqrt{l(l+1)}\right]} e^{\left[\frac{1-\frac{r}{a_0}}{n'+\sqrt{l(l+1)}}\right]}
 \end{equation}
+Dette giver os også at $R(r) = u(r)/r$ bliver
+\begin{equation}
+  R(r) = \frac{1}{a_0}{\left(\frac{r}{a_0}\right)}^{\left[n'-1+\sqrt{l(l+1)}\right]} e^{\left[\frac{1-\frac{r}{a_0}}{n'+\sqrt{l(l+1)}}\right]}
+\end{equation}
 
-%TODO kommenter det her resultat og sammenlign
-
-Plottes $V_{\text{eff}}$
 
 \begin{figure}[h!]
     \centering
