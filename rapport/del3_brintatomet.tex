@@ -2,10 +2,10 @@
 Den radiale Schrödingerligningen er givet ved \cite[s. 140]{griffiths}
 %
 \begin{align}
-    \frac{-\hbar^{2}}{2m}\diff[2]{u(r)}{r} + \overbrace{\left( - \frac{e^{2}}{4\pi\epsilon_{0}r} + \frac{\hbar^{2}}{2m}\frac{l(l+1)}{r^{2}} \right)}^{V_{\text{eff}}} u(r) & \nonumber = Eu(r).
+    \frac{-\hbar^{2}}{2m}\diff[2]{u(r)}{r} + \overbrace{\left( - \frac{e^{2}}{4\pi\epsilon_{0}r} + \frac{\hbar^{2}}{2m}\frac{l(l+1)}{r^{2}} \right)}^{V_{\text{eff}}} u(r) &  = Eu(r).
 \end{align}
 %
-hvor $V_{\text{eff}}$ er en sum af det velkendte Coulomb potentiale og et led tilhørende den ekstra, rotationelle frihedsgrad.
+hvor $V_{\text{eff}}$ er en sum af det velkendte Coulomb potentiale og et led tilhørende den ekstra, rotationelle frihedsgrad. Dermed har vi en differentialligning på samme form som tidligere.
 
 Fra \cite{griffiths} kendes bohrradien, $a_{0}$ og rydbergenergien $\mathrm{Ry}$ til følgende værdier;
 \begin{align}
@@ -13,7 +13,7 @@ Fra \cite{griffiths} kendes bohrradien, $a_{0}$ og rydbergenergien $\mathrm{Ry}$
     \label{eq:konstanter}
 \end{align}
 %
-Sættes energien til at være et multiplum af rydbergenergien, $E=-\varepsilon \mathrm{Ry}$, og genkendes det, at ${a_{0}}^{2}\mathrm{Ry} = \frac{\hbar^{2}}{2m}$, samt at $2a_{0}\mathrm{Ry} = \frac{e^{2}}{4\pi\epsilon_{0}}$, kan det skrives at,
+Da energien kan vælges at skrives som et produkt af rydbergenergien og en konstant $\varepsilon \in \mathbb{R}$ således at $E=-\varepsilon \mathrm{Ry}$, og idet man kan genkende, at ${a_{0}}^{2}\mathrm{Ry} = \frac{\hbar^{2}}{2m}$, samt at $2a_{0}\mathrm{Ry} = \frac{e^{2}}{4\pi\epsilon_{0}}$, kan det skrives at,
 \begin{align}
     k(r) = & \frac{1}{\hbar} \sqrt{2m\left( E - V_{\text{eff}} \right)}\\
     = & \sqrt{\frac{1}{a_{0}^{2}\mathrm{\mathrm{Ry}}} \left( E + \frac{e^{2}}{4\pi\epsilon_{0}r} - \frac{\hbar^{2}}{2m}\frac{l(l+1)}{r^{2}} \right)}\\
@@ -25,27 +25,23 @@ Nu kan $\frac{1}{a_0}$ trækkes udenfor kvadratroden, og ved at gange $\mathrm{R
     k(r) = & \frac{1}{a_0} \frac{1}{r} \sqrt{-\varepsilon r^2 + 2a_0r - a_0^2l(l+1)}, \\
     = & \frac{\sqrt{\varepsilon}}{a_0} \frac{1}{r} \sqrt{r^2 - \frac{2a_0}{\varepsilon}r + \frac{a_0^2}{\varepsilon}l(l+1)}.
 \end{align}
-Det indre af kvadratroden genkendes at være på formen $x^2 -x(a+b) + ab = (x-a)(x-b)$. Det er af interesse at bestemme $a$ og $b$ til at være de klassiske vendepunkter, da $k(a) = 0 = k(b)$. Da faktoren udenfor kvadratroden ikke er $0$, må kvadratrodens indre være $0$.
-%Nu er det indre i kvadratroden på en form som kan skrives som noget $(x-a)(x-b) = x^2 -x(a+b) + ab$.
-
-%Nu undersøges det om man kan ende ud med at få disse $a$ og $b$ størrelser til at være de klassiske vendepunkter, som er de $r$ som opfylder at $k(r) = 0$.
-%Da det udenfor kvadratroden i $k(r)$ ikke kan være 0, sættes det indre lig 0.
-\begin{equation}
-  r^2 - \frac{2a_0}{\varepsilon}r + \frac{a_0^2}{\varepsilon}l(l+1) = 0
-\end{equation}
+Det indre af kvadratroden genkendes at være på formen $x^2 -x(a+b) + ab = (x-a)(x-b)$. Det er af interesse at bestemme $a$ og $b$ til at være de klassiske vendepunkter, da $k(a) = 0 = k(b)$. Da faktoren udenfor kvadratroden ikke er $0$, må det indre af kvadratroden være $0$.
+%
+\begin{align}
+    r^2 - \frac{2a_0}{\varepsilon}r + \frac{a_0^2}{\varepsilon}l(l+1) = 0.
+\end{align}
 Dette har løsninger ved
 \begin{align}
-  r = & \frac{\frac{2a_0}{\varepsilon} \pm \sqrt{\frac{4a_0^2}{\varepsilon^2} - \frac{4a_0^2}{\varepsilon}l(l+1)   }  }{2}\\
-    = & \frac{a_0}{\varepsilon}[1+\sqrt{1-\varepsilon l(l+1)}]
+  r = \frac{\frac{2a_0}{\varepsilon} \pm \sqrt{\frac{4a_0^2}{\varepsilon^2} - \frac{4a_0^2}{\varepsilon}l(l+1)   }  }{2}
+  = \frac{a_0}{\varepsilon}\left[1 \pm \sqrt{1-\varepsilon l(l+1)}\right].
 \end{align}
 Herved bliver de klassiske vendepunkter
 \begin{align}
-  a =  \frac{a_0}{\varepsilon}\Bigl[1-\sqrt{1-\varepsilon l(l+1)}  \Bigr],\qquad b =  \frac{a_0}{\varepsilon}\Bigl[1+\sqrt{1-\varepsilon l(l+1)}  \Bigr]
+    a =  \frac{a_0}{\varepsilon}\Bigl[1-\sqrt{1-\varepsilon l(l+1)}  \Bigr],\quad \text{og} \quad b = \frac{a_0}{\varepsilon}\Bigl[1+\sqrt{1-\varepsilon l(l+1)}  \Bigr].
 \end{align}
 For at det nu skal passe i vores udtryk for $k(r)$ tjekkes det om
 \begin{align}
-  a+b = & \frac{2a_0}{\varepsilon} \\
-  ab  = & \frac{a_0^2}{\varepsilon} l(l+1)
+    a+b = \frac{2a_0}{\varepsilon} \quad \text{og} \quad  ab  = \frac{a_0^2}{\varepsilon} l(l+1).
 \end{align}
 $a+b$ leddet er oplagt, mens $ab$ leddet bliver
 \begin{align}
