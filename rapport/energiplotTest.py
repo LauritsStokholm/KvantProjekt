@@ -66,9 +66,9 @@ ax1.legend(loc=5)
 
 
 
-noOfl = 4
+noOfl = 3
 n_start = 2
-n_end = 12
+n_end = 8
 l_start = 4
 
 fig2,ax2 = plt.subplots()
@@ -117,7 +117,7 @@ plt.tick_params(
 
 fig2.savefig("energyPlot.png")
 plt.tight_layout()
-
+# plt.grid()
 
 
 plt.show()
