@@ -47,13 +47,12 @@ $a+b$ leddet er oplagt, mens $ab$ leddet bliver
 \begin{align}
   ab = & \frac{a_0^2}{\varepsilon^2}\Bigl(1-\sqrt{1-\varepsilon l(l+1)} \Bigr)\Bigl(1+\sqrt{1-\varepsilon l(l+1)} \Bigr)\\
      = & \frac{a_0^2}{\varepsilon^2}\Bigl(1-(1-\varepsilon l(l+1)) \Bigr) =  \frac{a_0^2}{\varepsilon^2} \varepsilon l(l+1)
-     = \frac{a_0^2}{\varepsilon} l(l+1).
+     = \frac{a_0^2}{\varepsilon} l(l+1)
 \end{align}
-%
-\fxnote{HERFRA}
-Det stemmer overens, hvorfor der arbejdes videre med disse værdierne.
+
+Det ses at det passer og derfor kan vi arbejde videre med disse værdier $a$ og $b$.
 \begin{align}
-    k(r) = & \frac{p(r)}{\hbar} = \frac{\sqrt{\varepsilon}}{a_0}\frac{1}{r}\sqrt{(r-a)(r-b)}.
+  k(r) = & \frac{p(r)}{\hbar} = \frac{\sqrt{\varepsilon}}{a_0}\frac{1}{r}\sqrt{(r-a)(r-b)}
 \end{align}
 Nu kan vi altså integrere fra $a$ til $b$, som er de klassiske vendepunkter og bruge \cref{eq:kvantiDone}.
 \begin{equation}
@@ -82,7 +81,7 @@ Nu kigger vi på den asymptotiske form for bølgefunktionerne ved store $r$.
 I det eksakte tilfælde er de på formen
 \begin{equation}
   R_{nl}(r) \sim \left(\frac{r}{a_0}\right)^{n-1}e^{-r/na_0}
-  \label{eq:eksatR}
+  \label{eq:eksaktR}
 \end{equation}
 
 For at finde dem i WKB tilfældet kigges først på formen af en sådan bølgefunktion. Det kan vises at den er på formen %TODO find formen her
@@ -133,21 +132,22 @@ Derved bliver $R(r) = u(r)/r$
   R(r) = \frac{1}{a_0}{\left(\frac{r}{a_0}\right)}^{\left[n'-1+\sqrt{l(l+1)}\right]} e^{\left[\frac{1-\frac{r}{a_0}}{n'+\sqrt{l(l+1)}}\right]}
   \label{eq:rAfR}
 \end{equation}
-Dette giver anledning til en sammenligning mellem \cref{eq:eksatR} og \cref{eq:rAfR}. Det ses at vi i begge udtryk har to led: et polynomielt led og et eksponentielt led. WKB approksimationen har dog taget højde for kvantetallet $l$ hvilket den eksakte løsning ikke har, hvilket ses
+Dette giver anledning til en sammenligning mellem \cref{eq:eksaktR} og \cref{eq:rAfR}. Det ses at vi i begge udtryk har to led: et polynomielt led og et eksponentielt led. WKB approksimationen har dog taget højde for kvantetallet $l$ hvilket den eksakte løsning ikke har. Det ses dog at begge led de går i $0$ for store $r$, altså gælder approksimationen for store $r$.
 
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=\columnwidth]{sammenligning.png}
-    \caption{Hydrogen}
-    \label{fig:hydrogen}
+    \begin{subfigure}{0.45\textwidth}
+        \centering
+        \includegraphics[width=\columnwidth]{sammenligning.png}
+        \caption{Hydrogen}
+        \label{fig:hydrogen}
+    \end{subfigure}
+    \begin{subfigure}{0.45\textwidth}
+        \centering
+        \includegraphics[width=\columnwidth]{energyPlot}
+        \caption{Hydrogen}
+        \label{fig:sammenlign}
+    \end{subfigure}
+    \caption{2 figurer}
+    \label{storfig}
 \end{figure}
-
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=\columnwidth]{energyPlot}
-    \caption{Hydrogen}
-    \label{fig:hydrogen}
-\end{figure}
-
-
-%
