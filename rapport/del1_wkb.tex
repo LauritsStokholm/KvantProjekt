@@ -1,3 +1,4 @@
+
 \section{WKB approksimation i brug ved Schrödingerligningen}
 I dette afsnit vil vi betragte Schrödingerligningen for en partikel i én dimension. Introduceres den klassiske impuls, som er givet ved $p(x) = \sqrt{2m(E-V(x)}$, kan man omskrive ligningen.
 %
@@ -32,87 +33,38 @@ Denne andenordens differentialligning kan opdeles i sin real-- og imaginærdel. 
 Heraf ses det fra den imaginære del, at det indre i parentesen er konstant, hvorfor
 \begin{align}
     \left( A(x)^{2}\phi'(x) \right)' = 0  \quad & \Leftrightarrow  \quad A(x)^{2}\phi'(x) = C^{2} \in \mathbb{C} \\
-    & \Leftrightarrow  \quad A(x) = \frac{C}{\sqrt{\phi'(x)}}
+    & \Leftrightarrow  \quad A(x) = \frac{C}{\sqrt{\phi'(x)}}.
     \label{eq:konst}
 \end{align}
-Desuden, ved at definere $k(x) = \frac{p(x)}{\hbar}$, kan realdelen omskrives. Indtil videre er der regnet eksakt, men denne del af differentialligning er svær at løse. Derfor antages $A$ som værende langsomt varierende, hvorfor krumningen er $A''(x)\ll 1$ og kan  negligeres. Specielt er $\frac{A''(x)}{A(x)} \ll \phi'(x)^{2}\wedge \frac{p^{2}}{\hbar^{2}}$.
+Desuden, ved at definere $k(x) = \frac{p(x)}{\hbar}$, kan realdelen omskrives. Indtil videre er der regnet eksakt, men denne del af differentialligningen er svær eller endda umulig at løse. Derfor antages $A$ som værende langsomt varierende, hvorfor krumningen er $A''(x)\ll 1$ og kan  negligeres.
+Specielt gælder det at
+\begin{equation}
+  \frac{A''(x)}{A(x)} \ll \phi'(x)^{2}\wedge k(x)^2.
+  \label{eq:TheApprox}
+\end{equation}
+Med antagelsen i \cref{eq:TheApprox} vil realdelen i \cref{eq:konst} reducere til
 \begin{align}
-    A''(x) - A(x)(\phi'(x))^{2} & =  -k(x)^{2}A(x),\\
-    \Leftrightarrow \frac{A''(x)}{A(x)} & = -k(x)^{2} + (\phi'(x))^{2} = 0, \\
-    \Leftrightarrow \left(\phi'(x)\right)^{2} & = k(x)^{2} \Leftrightarrow  \phi'(x) = \pm \frac{p}{\hbar}.
+    0 = \frac{A''(x)}{A(x)} = -k(x)^{2} + (\phi'(x))^{2}
+    \quad \Leftrightarrow\quad  \left(\phi'(x)\right)^{2} = k(x)^{2} \quad \Leftrightarrow \quad  \phi'(x) = \pm \frac{p}{\hbar}.
     \label{eq:ho}
 \end{align}
-hvorfor $\phi = \pm \frac{1}{\hbar}\int p(x) dx$. Disse resultater fra \cref{eq:konst} og \cref{eq:ho} indsættes \cref{eq:ansatz}.
-\begin{align}
-    \psi(x) = \frac{C}{\sqrt{\phi'(x)}}e^{\pm i\frac{1}{\hbar}\int p(x) dx}.
-    \label{eqpsi}
-\end{align}
-Den generelle WKB-løsning er en linearkombination af disse $\psi(x)$. Det bemærkes ved Borns statistiske fortolkning, at sansynligheden for at partiklen måles ved et givent $x$ er omvendt proportionel med dens klassiske impuls; $|\psi(x)|^2 \approx \frac{|C|^2}{\phi'(x)}$.
-
-
-%Dette må også være lig med højre side af \cref{eq:scrodingerLigning3}. Substitueres udtrykket for $\psi$ fra \cref{eq:ansatz} kan \cref{eq:diff2gange} reduceres til
+Hvis der integreres med hensyn til x i \cref{eq:ho} findes
 %
-%\begin{align}
-%    \left(- A{\left (x \right )} \left(\frac{d}{d x} \phi{\left (x \right )}\right)^{2} + i A{\left (x \right )} \frac{d^{2}}{d x^{2}}  \phi{\left (x \right )} + 2 i \frac{d}{d x} A{\left (x \right )} \frac{d}{d x} \phi{\left (x \right )} + \frac{d^{2}}{d x^{2}}  A{\left (x \right )}\right) e^{i \phi{\left (x \right )}} = - \frac{p^2}{\hbar^2} \psi = - \frac{p(x)^2}{\hbar^2} A(x) e^{i \phi(x)}
-%    \label{eq:udskrevet}
-%\end{align}
+\begin{equation}
+    \phi(x) = \pm \frac{1}{\hbar} \int p(x) dx
+    \label{eq:thisPhi}
+\end{equation}
 %
-%\begin{equation}
-%     \Rightarrow - A{\left(x \right)} \left(\frac{d}{d x} \phi{\left(x \right)}\right)^{2} + i A{\left(x \right)} \frac{d^{2}}{d x^{2}}  \phi{\left(x \right)} + 2 i \frac{d}{d x} A{\left(x \right)} \frac{d}{d x} \phi{\left (x \right )} + \frac{d^{2}}{d x^{2}}  A{\left (x \right )}
-%     = - \frac{p(x)^2}{\hbar^2} A(x)
-%     \label{eq:ReOgIm}
-%\end{equation}
+Substitueres $A(x)$ fra \cref{eq:konst} og udtrykket for $\phi{'\left (x \right )}$ fra \cref{eq:ho}  ind i ansatzen fra \cref{eq:ansatz} findes
 %
-%Sorteres venstre side af \cref{eq:ReOgIm} real delen og imaginær delen fås henholdsvis
+\begin{equation}
+    \psi(x) = A(x) e^{i \phi(x)} \cong
+    \frac{C}{\sqrt{( \phi{'\left (x \right )})}} e^{i \phi(x)} \cong
+    \frac{C}{\sqrt{\frac{p(x)}{\hbar}}} e^{\pm \frac{i}{\hbar} \int p(x) dx} \cong
+    \frac{C'}{\sqrt{p(x)}} e^{\pm \frac{i}{\hbar} \int p(x) dx}
+    \label{eq:final}
+\end{equation}
 %
-%\begin{equation}
-%    A{\left (x \right )} \left(\frac{d}{d x} \phi{\left (x \right )}\right)^{2}  + \frac{d^{2}}{d x^{2}}  A{\left (x \right )}
-%    = - \frac{p(x)^2}{\hbar^2} A(x)
-%    \label{eq:Re}
-%\end{equation}
-%
-%\begin{equation}
-%    i A{\left (x \right )} \frac{d^{2}}{d x^{2}}  \phi{\left (x \right )} + 2 i \frac{d}{d x} A{\left (x \right )} \frac{d}{d x} \phi{\left (x \right )}
-%    = - \frac{p(x)^2}{\hbar^2} A(x)
-%    \label{eq:Im}
-%\end{equation}
-%
-%Af disse kan\cref{eq:Im}  løses, løsningen er: % er det rigtigt? Hvorfor er der ingen løsning i Realdelen
-%
-%\begin{equation}
-%    A(x) = \frac{C}{\sqrt{(\frac{d}{d x} \phi{\left (x \right )})}}.
-%    \label{eq:ImLoes}
-%\end{equation}
-%
-%Hvor C er en konstant. Der eksisterer ingen løsninger til \cref{eq:Re}, og derfor foretages en approximation, ved blot at droppe $\frac{d^{2}}{d x^{2}}  A{\left (x \right )}$ leddet i samme ligning. Dette er en god approixmation, hvis $A(x)$ varier langsomt. Da kan \cref{eq:Re} omskrives til
-%
-%\begin{equation}
-%    \left(\frac{d}{d x} \phi{\left (x \right )}\right)^{2}
-%    = - \frac{p(x)^2}{\hbar^2}
-%    \label{eq:ReApprox}
-%\end{equation}
-%
-%\begin{equation}
-%    \Rightarrow \frac{d}{d x} \phi{\left (x \right )}
-%    = \pm \frac{p(x)}{\hbar}
-%    \label{eq:ReApproxFinal}
-%\end{equation}
-%
-%Hvis der integreres med hensyn til x findes
-%
-%\begin{equation}
-%    \phi(x) = \pm \frac{1}{\hbar} \int p(x) dx
-%    \label{wq:thisPhi}
-%\end{equation}
-%
-%Substitueres $A(x)$ fra \cref{eq:ImLoes} og udtrykket for $\frac{d}{d x} \phi{\left (x \right )}$ fra \cref{eq:ReApproxFinal}  ind i ansatzen fra \cref{eq:ansatz} findes
-%
-%\begin{equation}
-%    \psi(x) = A(x) e^{i \phi(x)} \cong
-%    \frac{C}{\sqrt{(\frac{d}{d x} \phi{\left (x \right )})}} e^{\phi(x)} \cong
-%    \frac{C}{\sqrt{\frac{p(x)}{\hbar}}} e^{\pm \frac{1}{\hbar} \int p(x) dx} \cong
-%    \frac{C'}{\sqrt{p(x)}} e^{\pm \frac{1}{\hbar} \int p(x) dx}
-%    \label{eq:final}
-%\end{equation}
-%
-%Hvor $C'$ er en ny konstant, der indeholder $\hbar$ og evt. andre konstanter fra integralet. Dette er det endelige udtryk for aproximationen. Løsningen ville da være en linear kombination af den positive og negative del.
+Hvor $C'$ er en ny konstant, der indeholder $\hbar$ og evt. andre konstanter fra integralet. Dette er det endelige udtryk for WKB-approksimationen. Løsningen ville da være en linearkombination af den positive og negative eksponent. Det bemærkes ved Borns statistiske fortolkning, at sansynligheden for at partiklen måles ved et givent $x$ er omvendt proportionel med dens klassiske impuls (se \cref{eq:final}).
+\\
+Når $\psi(x)$ nærmer sig de klassiske vendepunkter, vil betingelsen fra \cref{eq:TheApprox} ikke gælde, da $E \approx V(x)$. Her er approksimationen ikke blot upræcis, men faktisk ugyldig. $E \rightarrow V(x)$ betyder at $p(x) \rightarrow 0$ og det ses fra \cref{eq:final}  at $\psi(x) \rightarrow \infty$. Løsningen her kan ikke normeres, hvorfor det ikke er en fysisk løsning. For at løse problemet ved de klassiske vendepunkter, anvendes såkaldte "lappe-ligninger" ved grænserne, men det er ikke formålet med denne rapport at vise disse.
