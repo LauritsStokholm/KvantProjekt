@@ -2,28 +2,28 @@
 Den radiale Schrödingerligningen er givet ved \cite[s. 140]{griffiths}
 %
 \begin{align}
-    \frac{-\hbar^{2}}{2m}\diff[2]{u(r)}{r} + \left( - \frac{e^{2}}{4\pi\epsilon_{0}r} + \frac{\hbar^{2}}{2m}\frac{l(l+1)}{r^{2}} \right)u(r) & \nonumber = Eu(r)
+    \frac{-\hbar^{2}}{2m}\diff[2]{u(r)}{r} + \overbrace{\left( - \frac{e^{2}}{4\pi\epsilon_{0}r} + \frac{\hbar^{2}}{2m}\frac{l(l+1)}{r^{2}} \right)}^{V_{\text{eff}}} u(r) & \nonumber = Eu(r).
 \end{align}
 %
 hvor $V_{\text{eff}}$ er en sum af det velkendte Coulomb potentiale og et led tilhørende den ekstra, rotationelle frihedsgrad.
 
-Fra \cite{griffiths} kendes bohrradien, $a_{0}$ og Rydbergenergien $\mathrm{Ry}$ til følgende værdier;
+Fra \cite{griffiths} kendes bohrradien, $a_{0}$ og rydbergenergien $\mathrm{Ry}$ til følgende værdier;
 \begin{align}
     a_{0} = \frac{\hbar^{2}}{2m} {\left(\frac{e^{2}}{4\pi\epsilon_{0}} \right) \quad \text{og} \quad \mathrm{Ry} = \frac{m}{2\hbar^{2}}\left(\frac{e^{2}}{4\pi\epsilon_0} \right)}^{2}.
     \label{eq:konstanter}
 \end{align}
 %
-Sættes energien til at være et multiplum af Rydbergenergien, $E = -\varepsilon \mathrm{Ry}$, og genkendes det, at $a_{0}^{2}\mathrm{Ry} = \frac{\hbar^{2}}{2m}$, samt at $2a_{0}\mathrm{Ry} = \frac{e^{2}}{4\pi\epsilon_{0}}$, kan  skrives
+Sættes energien til at være et multiplum af rydbergenergien, $E=-\varepsilon \mathrm{Ry}$, og genkendes det, at ${a_{0}}^{2}\mathrm{Ry} = \frac{\hbar^{2}}{2m}$, samt at $2a_{0}\mathrm{Ry} = \frac{e^{2}}{4\pi\epsilon_{0}}$, kan det skrives at,
 \begin{align}
     k(r) = & \frac{1}{\hbar} \sqrt{2m\left( E - V_{\text{eff}} \right)}\\
-    = & \sqrt{\frac{1}{a_{0}^{2}\mathrm{\mathrm{Ry}}} \left( E + \frac{e^{2}}{4\pi\epsilon_{0}r} - \frac{\hbar^{2}}{2m}\frac{l(l+1)}{r^{2}} \right)} \\
+    = & \sqrt{\frac{1}{a_{0}^{2}\mathrm{\mathrm{Ry}}} \left( E + \frac{e^{2}}{4\pi\epsilon_{0}r} - \frac{\hbar^{2}}{2m}\frac{l(l+1)}{r^{2}} \right)}\\
     = & \sqrt{\frac{1}{a_{0}^{2}\mathrm{Ry}} \left( (-\varepsilon \mathrm{Ry}) + \frac{2a_{0}\mathrm{Ry}}{r} - a_{0}^{2}\mathrm{Ry}\frac{l(l+1)}{r^{2}} \right)}\\
-    = & \frac{1}{r} \sqrt{\frac{1}{a_{0}^{2}{Ry}} \left( (-\varepsilon \mathrm{Ry})r^{2} + 2a_{0}\mathrm{Ry} r - a_{0}^{2}\mathrm{Ry} l(l+1) \right)}
+    = & \frac{1}{r} \sqrt{\frac{1}{a_{0}^{2}{Ry}} \left( (-\varepsilon \mathrm{Ry})r^{2} + 2a_{0}\mathrm{Ry} r - a_{0}^{2}\mathrm{Ry} l(l+1) \right)}.
 \end{align}
-Trækker vi her $\frac{1}{a_0}$ udenfor og ganger $\mathrm{Ry}$ ind i parantesen får vi
+Nu kan $\frac{1}{a_0}$ trækkes udenfor kvadratroden, og ved at gange $\mathrm{Ry}$ ind i parantesen vil man få
 \begin{align}
-  k(r) = & \frac{1}{a_0} \frac{1}{r} \sqrt{-\varepsilon r^2 + 2a_0r - a_0^2l(l+1)} \\
-  = & \frac{\sqrt{\varepsilon}}{a_0} \frac{1}{r} \sqrt{r^2 - \frac{2a_0}{\varepsilon}r + \frac{a_0^2}{\varepsilon}l(l+1)}
+    k(r) = & \frac{1}{a_0} \frac{1}{r} \sqrt{-\varepsilon r^2 + 2a_0r - a_0^2l(l+1)}, \\
+    = & \frac{\sqrt{\varepsilon}}{a_0} \frac{1}{r} \sqrt{r^2 - \frac{2a_0}{\varepsilon}r + \frac{a_0^2}{\varepsilon}l(l+1)}.
 \end{align}
 
 Nu er det indre i kvadratroden på en form som kan skrives som noget $(x-a)(x-b) = x^2 -x(a+b) + ab$. Nu undersøges det om man kan ende ud med at få disse $a$ og $b$ størrelser til at være de klassiske vendepunkter, som er de $r$ som opfylder at $k(r) = 0$.

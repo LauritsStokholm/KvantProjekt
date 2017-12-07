@@ -2,22 +2,22 @@
 I dette afsnit vil vi betragte Schrödingerligningen for en partikel i én dimension. Introduceres den klassiske impuls, som er givet ved $p(x) = \sqrt{2m(E-V(x)}$, kan man omskrive ligningen.
 %
 \begin{align}
-    & \frac{\hbar^2}{2m} \pdiff[2]{\psi(x)}{x} + V(x)\psi(x) = E\psi(x) \\
+    & \frac{\hbar^2}{2m} \pdiff[2]{\psi(x)}{x} + V(x)\psi(x) = E\psi(x), \\
     & \Leftrightarrow \pdiff[2]{\psi(x)}{x} = \frac{2m}{\hbar^2}\psi(x)(E - V(x))  = - \frac{p(x)^2}{\hbar^2}\psi(x).
     \label{eq:schrodingerligning}
 \end{align}
 %
 Det er kendt, at $\psi(x) \in \mathbb{C}$ er en kompleksfunktion som kan skrives som et produkt af en reel amplitude, $A \in \mathbb{R}$ og en kompleks eksponential med reel fase $\phi(x)\in \mathbb{R}$. Derfor anvendes nu ansatzen.
 \begin{equation}
-    \psi(x) = A(x) e^{i \phi(x)}
+    \psi(x) = A(x) e^{i \phi(x)}.
     \label{eq:ansatz}
 \end{equation}
 Lad $E > V(x) \ \forall x$, hvilket svarer til et klassisk regime.
 Nu kan $\pdiff[2]{\psi(x)}{x}$ bestemmes. For overskueligheden lader vi $A'(x) = \pdiff{A}{x}$, og så fremdeles af højere ordens led.
 \begin{align}
-    \pdiff[2]{\psi(x)}{x} = & \pdiff{}{x}\left( \left[ A'(x) + A(x)i\phi'(x) \right]e^{i\phi(x)} \right), \\
-    = & \left[ A''(x) + A'(x)i\phi'(x) + A'(x)i\phi'(x) + A(x)i\phi''(x) - A(x)( \phi'(x))^2\right]e^{i\phi(x)}, \\
-    = & \left(\left[ A''(x) - A(x)(\phi'(x))^2\right] + i \left[2A'(x)\phi'(x) + A(x)\phi''(x) \right]\right)e^{i\phi(x)},\\
+    \pdiff[2]{\psi(x)}{x} = & \pdiff{}{x}\left( \left[ A'(x) + A(x)i\phi'(x) \right]e^{i\phi(x)} \right) \\
+    = & \left[ A''(x) + A'(x)i\phi'(x) + A'(x)i\phi'(x) + A(x)i\phi''(x) - A(x)( \phi'(x))^2\right]e^{i\phi(x)} \\
+    = & \left(\left[ A''(x) - A(x)(\phi'(x))^2\right] + i \left[2A'(x)\phi'(x) + A(x)\phi''(x) \right]\right)e^{i\phi(x)}\\
     = & -\frac{p^2}{\hbar^2}\psi(x) = -\frac{p^2}{\hbar^2} A(x)e^{i\phi(x)}.
     \label{eq:regime}
 \end{align}
