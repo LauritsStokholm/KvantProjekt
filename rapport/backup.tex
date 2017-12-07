@@ -36,16 +36,45 @@ Heraf ses det fra den imaginære del, at det indre i parentesen er konstant, hvo
     & \Leftrightarrow  \quad A(x) = \frac{C}{\sqrt{\phi'(x)}}
     \label{eq:konst}
 \end{align}
-Desuden, ved at definere $k(x) = \frac{p(x)}{\hbar}$, kan realdelen omskrives. Indtil videre er der regnet eksakt, men denne del af differentialligning er svær at løse. Derfor antages $A$ som værende langsomt varierende, hvorfor krumningen er $A''(x)\ll 1$ og kan  negligeres. Specielt er $\frac{A''(x)}{A(x)} \ll \phi'(x)^{2}\wedge \frac{p^{2}}{\hbar^{2}}$.
+Desuden, ved at definere $k(x) = \frac{p(x)}{\hbar}$, kan realdelen omskrives. Indtil videre er der regnet eksakt, men denne del af differentialligning er svær at løse. Derfor antages $A$ som værende langsomt varierende, hvorfor krumningen er $A''(x)\ll 1$ og kan  negligeres.
+Specielt gælder det at
+\begin{equation}
+  \frac{A''(x)}{A(x)} \ll \phi'(x)^{2}\wedge \frac{p^{2}}{\hbar^{2}}.
+  \label{eq:TheApprox}
+\end{equation}
 \begin{align}
     A''(x) - A(x)(\phi'(x))^{2} & =  -k(x)^{2}A(x),\\
     \Leftrightarrow \frac{A''(x)}{A(x)} & = -k(x)^{2} + (\phi'(x))^{2} = 0, \\
     \Leftrightarrow \left(\phi'(x)\right)^{2} & = k(x)^{2} \Leftrightarrow  \phi'(x) = \pm \frac{p}{\hbar}.
     \label{eq:ho}
 \end{align}
+
+Hvis der integreres med hensyn til x i \cref{eq:ho} findes
+%
+\begin{equation}
+    \phi(x) = \pm \frac{1}{\hbar} \int p(x) dx
+    \label{eq:thisPhi}
+\end{equation}
+%
+Substitueres $A(x)$ fra \cref{eq:konst} og udtrykket for $\phi{'\left (x \right )}$ fra \cref{eq:ho}  ind i ansatzen fra \cref{eq:ansatz} findes
+%
+\begin{equation}
+    \psi(x) = A(x) e^{i \phi(x)} \cong
+    \frac{C}{\sqrt{( \phi{'\left (x \right )})}} e^{i \phi(x)} \cong
+    \frac{C}{\sqrt{\frac{p(x)}{\hbar}}} e^{\pm \frac{i}{\hbar} \int p(x) dx} \cong
+    \frac{C'}{\sqrt{p(x)}} e^{\pm \frac{i}{\hbar} \int p(x) dx}
+    \label{eq:final}
+\end{equation}
+%
+Hvor $C'$ er en ny konstant, der indeholder $\hbar$ og evt. andre konstanter fra integralet. Dette er det endelige udtryk for aproximationen. Løsningen ville da være en linear kombination af den positive og negative del. Borns statistiske fortolkning siger at for at finde sandsynlighedstætheden, skal man tage normkvadratet af \cref{eq:final}, herved finder man at $|\psi(x)|^2 \approx \frac{|C|^2}{\phi'(x)}$. Med dette kan man bl.a. se, at det er usandsynligt at finde partiklen, der hvor hastigheden er stor.
+\\
+Bemærk, at når betingelsen fra \cref{eq:TheApprox} ikke gælder, altså når et punkt nærmer sig de klassiske vendepunkter hvor $E \approx V(X)$, er approximationen ikke blot upræcis, men derimod ugyldig. $E \approx V(X)$ betyder at $p(x) \rightarrow 0$ og det ses fra \cref{eq:final}  at $\psi(x) \rightarrow \infty$. Dette kan ikke normaliseres og vi kan derfor ikke medtage det. For at løse problemet, anvendes såkaldte "lappe-ligninger". Men det er ikke formålet med denne rapport at vise disse.
+
+
+
 hvorfor $\phi = \pm \frac{1}{\hbar}\int p(x) dx$. Disse resultater fra \cref{eq:konst} og \cref{eq:ho} indsættes \cref{eq:ansatz}.
 \begin{align}
-    \psi(x) = \frac{C}{\sqrt{\phi'(x)}}e^{\pm i\frac{1}{\hbar}\int p(x) dx}.
+    \psi(x) = \frac{C}{\sqrt{p(x)}}e^{\pm \frac{i}{\hbar}\int p(x) dx}.
     \label{eqpsi}
 \end{align}
 Den generelle WKB-løsning er en linearkombination af disse $\psi(x)$. Det bemærkes ved Borns statistiske fortolkning, at sansynligheden for at partiklen måles ved et givent $x$ er omvendt proportionel med dens klassiske impuls; $|\psi(x)|^2 \approx \frac{|C|^2}{\phi'(x)}$.
