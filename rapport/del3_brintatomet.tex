@@ -2,10 +2,13 @@
 Den radiale Schrödingerligningen er givet ved \cite[s. 140]{griffiths}
 %
 \begin{align}
-    \frac{-\hbar^{2}}{2m}\diff[2]{u(r)}{r} + \left( - \frac{e^{2}}{4\pi\epsilon_{0}r} + \frac{\hbar^{2}}{2m}\frac{l(l+1)}{r^{2}} \right)u(r) & \nonumber = Eu(r), &
+    \frac{-\hbar^{2}}{2m}\diff[2]{u(r)}{r} + \left( - \frac{e^{2}}{4\pi\epsilon_{0}r} + \frac{\hbar^{2}}{2m}\frac{l(l+1)}{r^{2}} \right)u(r) & \nonumber = Eu(r)
     \label{eq:schroedinger3d}
 \end{align}
+%
+hvor $V_{\text{eff}}$ er en sum af det velkendte Coulomb potentiale og et led tilhørende den ekstra, rotationelle frihedsgrad.
 
+<<<<<<< HEAD
 hvor $V_{\text{eff}}$ er en sum af Coulomb potentialet og et led tilhørende et angulært moment.
 
 Fra \cite{griffiths} kendes bohrradien, $a_{0}$ og Rydbergenergien $\mathrm{Ry}$ til følgende værdier;
@@ -147,4 +150,141 @@ Plottes $V_{\text{eff}}$
 \end{figure}
 
 
+=======
+%Fra \cite{griffiths} kendes bohrradien, $a_{0}$ og Rydbergenergien $\mathrm{Ry}$ til følgende værdier;
+%\begin{align}
+%    a_{0} = \frac{\hbar^{2}}{2m}\left( \frac{e^{2}}{4\pi\epsilon_{0}} \right) \quad \text{og} \quad 
+%\mathrm{Ry} = \frac{m}{2\hbar^{2}}\left( \frac{e^{2}}{4\pi\epsilon_0} \right)^{2}
+%\label{eq:konstanter}
+%\end{align}
 %
+%Sættes energien til at være et multiplum af Rydbergenergien, $E = -\varepsilon \mathrm{Ry}$, og genkendes det, at $a_{0}^{2}\mathrm{Ry} = \frac{\hbar^{2}}{2m}$, samt at $2a_{0}\mathrm{Ry} = \frac{e^{2}}{4\pi\epsilon_{0}}$, kan \fxnote{reference} skrives
+%\begin{align}
+%    k(r) = & \frac{1}{\hbar} \sqrt{2m\left( E - V_{\text{eff}} \right)}\\
+%    = & \sqrt{\frac{1}{a_{0}^{2}\mathrm{\mathrm{Ry}}} \left( E + \frac{e^{2}}{4\pi\epsilon_{0}r} - \frac{\hbar^{2}}{2m}\frac{l(l+1)}{r^{2}} \right)} \\
+%    = & \sqrt{\frac{1}{a_{0}^{2}\mathrm{Ry}} \left( (-\varepsilon \mathrm{Ry}) + \frac{2a_{0}\mathrm{Ry}}{r} - a_{0}^{2}\mathrm{Ry}\frac{l(l+1)}{r^{2}} \right)}\\
+%    = & \frac{1}{r} \sqrt{\frac{1}{a_{0}^{2}{Ry}} \left( (-\varepsilon \mathrm{Ry})r^{2} + 2a_{0}\mathrm{Ry} r - a_{0}^{2}\mathrm{Ry} l(l+1) \right)}
+%\end{align}
+%Trækker vi her $\frac{1}{a_0}$ udenfor og ganger $\mathrm{Ry}$ ind i parantesen får vi
+%\begin{align}
+%  k(r) = & \frac{1}{a_0} \frac{1}{r} \sqrt{-\varepsilon r^2 + 2a_0r - a_0^2l(l+1)} \\
+%  = & \frac{\sqrt{\varepsilon}}{a_0} \frac{1}{r} \sqrt{r^2 - \frac{2a_0}{\varepsilon}r + \frac{a_0^2}{\varepsilon}l(l+1)}
+%\end{align}
+%
+%Nu er det indre i kvadratroden på en form som kan skrives som noget $(x-a)(x-b) = x^2 -x(a+b) + ab$. Nu undersøges det om man kan ende ud med at få disse $a$ og $b$ størrelser til at være de klassiske vendepunkter, som er de $r$ som opfylder at $k(r) = 0$.
+%Da det udenfor kvadratroden i $k(r)$ ikke kan være 0, sættes det indre lig 0.
+%\begin{equation}
+%  r^2 - \frac{2a_0}{\varepsilon}r + \frac{a_0^2}{\varepsilon}l(l+1) = 0
+%\end{equation}
+%Dette har løsninger ved
+%\begin{align}
+%  r = & \frac{\frac{2a_0}{\varepsilon} \pm \sqrt{\frac{4a_0^2}{\varepsilon^2} - \frac{4a_0^2}{\varepsilon}l(l+1)   }  }{2}\\
+%    = & \frac{a_0}{\varepsilon}[1+\sqrt{1-\varepsilon l(l+1)}]
+%\end{align}
+%Herved bliver de klassiske vendepunkter
+%\begin{align}
+%  a =  \frac{a_0}{\varepsilon}\Bigl[1-\sqrt{1-\varepsilon l(l+1)}  \Bigr],\qquad b =  \frac{a_0}{\varepsilon}\Bigl[1+\sqrt{1-\varepsilon l(l+1)}  \Bigr]
+%\end{align}
+%For at det nu skal passe i vores udtryk for $k(r)$ tjekkes det om
+%\begin{align}
+%  a+b = & \frac{2a_0}{\varepsilon} \\
+%  ab  = & \frac{a_0^2}{\varepsilon} l(l+1)
+%\end{align}
+%$a+b$ leddet er oplagt, mens $ab$ leddet bliver
+%\begin{align}
+%  ab = & \frac{a_0^2}{\varepsilon^2}\Bigl(1-\sqrt{1-\varepsilon l(l+1)} \Bigr)\Bigl(1+\sqrt{1-\varepsilon l(l+1)} \Bigr)\\
+%     = & \frac{a_0^2}{\varepsilon^2}\Bigl(1-(1-\varepsilon l(l+1)) \Bigr) =  \frac{a_0^2}{\varepsilon^2} \varepsilon l(l+1)
+%     = \frac{a_0^2}{\varepsilon} l(l+1)
+%\end{align}
+%
+%Det ses at det passer og derfor kan vi arbejde videre med disse værdier $a$ og $b$.
+%\begin{align}
+%  k(r) = & \frac{p(r)}{\hbar} = \frac{\sqrt{\varepsilon}}{a_0}\frac{1}{r}\sqrt{(r-a)(r-b)}
+%\end{align}
+%Nu kan vi altså integrere fra $a$ til $b$, som er de klassiske vendepunkter og bruge \cref{eq:kvantiDone}.
+%\begin{equation}
+%  \int_{a}^{b}k(r)dr = \frac{\sqrt{\varepsilon}}{a_0} \Bigl[\frac{\pi}{2}(\sqrt{b}-\sqrt{a})^2  \Bigr]
+%\end{equation}
+%Her er det brugt at
+%\begin{equation}
+%  \int_{\alpha}^{\beta}\frac{1}{u}\sqrt{(u-\alpha)(u-\beta)}du = \frac{\pi}{2}(\sqrt{\beta}-\sqrt{\alpha})^2
+%\end{equation}
+%Herfra følger det at
+%\begin{align}
+%  n' = & \frac{\sqrt{\varepsilon}}{2a_0}(\sqrt{b}-\sqrt{a})^2 = \frac{\sqrt{\varepsilon}}{2a_0}(b+a-2\sqrt{ab})\\
+%     = & \frac{\sqrt{\varepsilon}}{2a_0}\Bigl(\frac{2a_0}{\varepsilon}-2a_0\sqrt{\frac{1}{\varepsilon}l(l+1)}\Bigr)\\
+%     = & \frac{1}{\sqrt{\varepsilon}} -l(l+1)
+%\end{align}
+%Herfra finder vi $\varepsilon$ til at være
+%\begin{equation}
+%  \varepsilon = \frac{1}{\Bigl[n'+l(l+1)  \Bigr]^2}
+%\end{equation}
+%Og da $E = -\varepsilon Ry$, så kan vi skrives
+%\begin{equation}
+%  E_{n',l} = \frac{-Ry}{\Bigl[n'+l(l+1)  \Bigr]^2}
+%\end{equation}
+%
+%Nu kigger vi på den asymptotiske form for bølgefunktionerne ved store $r$.
+%I det eksakte tilfælde er de på formen
+%\begin{equation}
+%  R_{nl}(r) \sim \left(\frac{r}{a_0}\right)^{n-1}e^{-r/na_0}
+%\end{equation}
+%
+%For at finde dem i WKB tilfældet kigges først på formen af en sådan bølgefunktion. Det kan vises at den er på formen %TODO find formen her
+%\begin{equation}
+%  u(r) \sim exp\Bigl[-\int_{a_0}^{r}k(r')dr'\Bigr]
+%\end{equation}
+%Først kigges der på $k(r)$ da vi gerne vil lave en rækkeudvikling da vi kun kigger på meget store $r$.
+%Vi har altså at
+%\begin{equation}
+%  k(r) = \frac{\sqrt{\varepsilon}}{a_0}\frac{1}{r}\sqrt{(r-a)(r-b)}
+%\end{equation}
+%Her lader vi $\frac{1}{r}$ gå ind under kvadratroden og vi får
+%\begin{align}
+%  k(r) = & \frac{\sqrt{\varepsilon}}{a_0}\sqrt{(1-\frac{a}{r})(1-\frac{b}{r})} = \frac{\sqrt{\varepsilon}}{a_0}\sqrt{1-\frac{a+b}{r}+\frac{ab}{r^2}}
+%\end{align}
+%Her beholder vi kun til første orden og vi får altså noget som vi kan rækkeudvikle ved den sædvanelige kvadratrods række.
+%\begin{align}
+%  k(r) \approx & \frac{\sqrt{\varepsilon}}{a_0}\sqrt{1-\frac{a+b}{r}}\\
+%       = & \frac{\sqrt{\varepsilon}}{a_0}(1-\frac{1}{2}\frac{a+b}{r})
+%\end{align}
+%Husker vi på $a+b = \frac{2a_0}{\varepsilon}$ så får vi
+%\begin{equation}
+%  k(r) = \frac{\sqrt{\varepsilon}}{a_0}-\frac{1}{\sqrt{\varepsilon}r}
+%\end{equation}
+%\\
+%Kigger vi da på integralet har vi at
+%\begin{align}
+%  \int_{a_0}^{r}k(r')dr' = & \frac{\sqrt{\varepsilon}}{a_0}(r-a_0) - \frac{1}{\sqrt{\varepsilon}}\left(\ln{r}-\ln{a_0}\right)\\
+%  = & \frac{\sqrt{\varepsilon}}{a_0}(r-a_0) - \ln{((\frac{r}{a_0})^{\frac{1}{\sqrt{\varepsilon}}})}
+%\end{align}
+%
+%Så nu kan vi altså skrive vores $u(r)$ op som
+%\begin{align}
+%  u(r) \sim & \exp\left[-\frac{\sqrt{\varepsilon}}{a_0}(r-a_0) + \ln{((\frac{r}{a_0})^{\frac{1}{\sqrt{\varepsilon}}})}\right]\\
+%        = & \exp\left[-\frac{\sqrt{\varepsilon}}{a_0}(r-a_0)\right] + (\frac{r}{a_0})^{\frac{1}{\sqrt{\varepsilon}}}\\
+%        = & \exp\left[\sqrt{\varepsilon}(1-\frac{r}{a_0})\right] + (\frac{r}{a_0})^{\frac{1}{\sqrt{\varepsilon}}}
+%\end{align}
+%Nu bruges det blot at
+%\begin{equation}
+%  \varepsilon = \frac{1}{\left[n'+\sqrt{l(l+1)}\right]^2}
+%\end{equation}
+%Og det giver os altså at
+%\begin{equation}
+%  u(r) \sim {\left(\frac{r}{a_0}\right)}^{\left[n'+\sqrt{l(l+1)}\right]} e^{\left[\frac{1-\frac{r}{a_0}}{n'+\sqrt{l(l+1)}}\right]}
+%\end{equation}
+%
+%%TODO kommenter det her resultat og sammenlign
+%
+%Plottes $V_{\text{eff}}$
+%
+%\begin{figure}[h!]
+%    \centering
+%    \includegraphics[width=\columnwidth]{hydrogen}
+%    \caption{Hydrogen}
+%    \label{fig:hydrogen}
+%\end{figure}
+%
+>>>>>>> bada56c0415b54923efc5d7a055dee589ec01fa6
+%
+%%
