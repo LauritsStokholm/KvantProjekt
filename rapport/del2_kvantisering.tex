@@ -1,11 +1,11 @@
 \section{Potentialebrønd med vertikale vægge}
-Lad os betragte det klassiske system, $E > V(x) \ \forall x \in[a,b]$, hvor intervallet $[a,b]$ er det begrænsede interval med $a$ og $b$ som klassiske vendepunkter. Heri eksisterer bølgefunktionen $\psi(x)$, ækvivalent til en brønd med vertikale vægge. Lad $|\psi(a)|^{2} = 0 = |\psi(b)|^{2}$. Fra \cref{eq:final} vil man kunne skrive $\psi(x)$ som en sum af hhv. negativ og positiv eksponent.
+Lad os betragte det klassiske system, $E > V(x) \ \forall x \in[a,b]$, hvor intervallet $[a,b]$ er det begrænsede interval med $a$ og $b$ som klassiske vendepunkter. Heri eksisterer bølgefunktionen $\psi(x)$, ækvivalent til en brønd med vertikale vægge. Lad $|\psi(a)|^{2} = 0 = |\psi(b)|^{2}$. Fra \cref{eq:final} vil man kunne skrive $\psi(x)$ som en sum af hhv. \ negativ og positiv eksponent.
 
 \begin{equation}
     \psi(x) \cong \frac{1}{\sqrt{p(x)}}\left[C_{+}e^{i\phi(x)}+C_{-}e^{-i\phi(x)}\right].
   \label{eq:kvantiseringStart}
 \end{equation}
-Ved at definere to nye konstanter, $C_1 \equiv i(C_{+}-C_{-})$ og $C_2 \equiv C_{+}+C_{-}$, kan dette ved brug af eulers identitet skrives om til
+Ved at definere to nye konstanter, $C_1 \equiv i(C_{+}-C_{-})$ og $C_2 \equiv C_{+}+C_{-}$, kan dette ved brug af Eulers identitet skrives om til
 \begin{equation}
   \psi(x) = \frac{1}{\sqrt{p(x)}}
   \Bigl[    C_1\sin{\phi(x)} + C_2\cos{\phi(x)}   \Bigr].
@@ -17,11 +17,10 @@ Her gælder det, at $\phi(x) = \frac{1}{\hbar}\int p(x) dx$. Integreres over int
 \end{equation}
 Fra startbetingelsen kræves at $\psi(a) = 0 = \psi(b)$. Da\footnote{Dette kan nemt ses, ved at integrere fra og til $a$} $\phi(a) = 0$, må $C_2$ være 0, da $\cos(0)\neq 0$. Dette medfører at,
 \begin{equation}
-    \psi(x) = \frac{1}{\sqrt{p(x)}}C_1\sin{\phi(x)}.
+    \psi(x) = \frac{C_1}{\sqrt{p(x)}}\sin{\phi(x)}.
 \end{equation}
-Nu skal det stadig gælde at $\psi(b) = 0$, og da $C_1\neq 0$\footnote{Dette er en ikke normerbar løsning, og en ret kedelig en af slagsen.}, må det altså betyde at $\sin(\phi(b)) = 0$, hvilket medfører at $\phi(b) = n'\pi$, hvor $n' = 0, 1, 2\ldots$.
-Resultatet bliver
+Nu skal det stadig gælde at $\psi(b) = 0$, og da\footnote{Da dette ellers ville være en ikke normerbar løsning, og en ret kedelig en af slagsen.} $C_1\neq 0$, må det altså betyde at $\sin(\phi(b)) = 0$, hvilket medfører at $\phi(b) = n'\pi$, hvor $n' = 0, \pm1, \pm2\ldots$. Da fortegnet kan absorberes i konstanten, bliver resultatet
 \begin{equation}
-  \int_{a}^{b} p(x) dx = n'\pi\hbar.
+    \phi(b) = n'\pi = \frac{1}{\hbar}\int_{a}^{b} p(x) dx \quad \Leftrightarrow \quad \int_{a}^{b} p(x) dx = n'\pi\hbar.
   \label{eq:kvantiDone}
 \end{equation}
