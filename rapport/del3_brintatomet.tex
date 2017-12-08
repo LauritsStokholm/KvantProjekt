@@ -1,8 +1,8 @@
 \section{Brintatomet}
-Den radiale Schrödingerligningen er givet ved \cite[s. 140]{griffiths}
+Den radiale Schrödingerligningen er givet ved \cite[s. 140]{griffiths}:
 %
 \begin{align}
-    \frac{-\hbar^{2}}{2m}\diff[2]{u(r)}{r} + \overbrace{\left( - \frac{e^{2}}{4\pi\epsilon_{0}r} + \frac{\hbar^{2}}{2m}\frac{l(l+1)}{r^{2}} \right)}^{V_{\text{eff}}} u(r) &  = Eu(r).
+    \frac{-\hbar^{2}}{2m}\diff[2]{u(r)}{r} + \overbrace{\left( - \frac{e^{2}}{4\pi\epsilon_{0}r} + \frac{\hbar^{2}}{2m}\frac{l(l+1)}{r^{2}} \right)}^{V_{\text{eff}}} u(r) &  = Eu(r),
 \end{align}
 %
 hvor $V_{\text{eff}}$ er en sum af det velkendte Coulomb potentiale og et led tilhørende den ekstra, rotationelle frihedsgrad. Dermed har vi en differentialligning på samme form som tidligere.
@@ -86,12 +86,12 @@ Lad os nu se på den asymptotiske form for brints bølgefunktioner ved $r\gg a_0
   \label{eq:eksaktR}
 \end{equation}
 %
-For at bestemme værdierne af $R_{n'l}$ ved WKB-metoden betragtes først $u(r)$, som kan vises at være på formen
+For at bestemme værdierne af $R_{n'l}$ ved WKB-metoden betragtes først $u(r)$, som kan vises at være givet ved
 \begin{equation}
     u(r) \sim \exp\Bigl[-\int_{a_0}^{r}k(r')dr'\Bigr].
     \label{rasmusvilhaveetintegrale}
 \end{equation}
-For at løse integralet, må vi først betragte $k(r)$ for store værdier af $r$, hvorfor det rækkeudvikles. Det er tidligere fundet, at
+For at løse integralet, må vi først betragte $k(r)$ for store værdier af $r$, hvorfor der rækkeudvikles. Det er tidligere fundet, at
 \begin{equation}
     k(r) = \frac{\sqrt{\varepsilon}}{a_0}\frac{1}{r}\sqrt{(r-a)(r-b)}.
 \end{equation}
@@ -130,15 +130,16 @@ og det giver os altså at
 \begin{equation}
     u(r) \sim {\left(\frac{r}{a_0}\right)}^{\left[n'+\sqrt{l(l+1)}\right]} e^{\left[\frac{1-\frac{r}{a_0}}{n'+\sqrt{l(l+1)}}\right]}.
 \end{equation}
-Derved bliver $R_{n'l}(r) = u(r)/r$
+Fra \cite[s. 140]{griffiths} har vi, at $R_{n'l}(r) = u(r)/r$, hvilket medfører 
 \begin{equation}
     R_{n'l}(r) = \frac{1}{a_0}{\left(\frac{r}{a_0}\right)}^{\left[n'-1+\sqrt{l(l+1)}\right]} e^{\left[\frac{1-\frac{r}{a_0}}{n'+\sqrt{l(l+1)}}\right]}.
   \label{eq:rAfR}
 \end{equation}
-Dette giver anledning til en sammenligning mellem de eksakte-  og de approksimerede løsninger (se hhv. \cref{eq:eksaktR} og \cref{eq:rAfR}). Begge udtryk er et produkt af to led: et polynomielt- og et eksponentielt led. WKB approksimationen tager dog højde for kvantetallet $l$, hvad den eksakte løsning ikke gør. Det ses at begge led går mod $0$ for store $r$, hvorfor WKB-metoden har god overenstemmelse med den eksakte løsning for store $r$.
+Dette giver anledning til en sammenligning mellem de eksakte-  og de approksimerede løsninger (se hhv. \cref{eq:eksaktR} og \cref{eq:rAfR}). Begge udtryk er et produkt af to led: et polynomielt- og et eksponentielt led. WKB approksimationen tager dog højde for kvantetallet $l$, hvad den eksakte løsning ikke gør. Det ses af \cref{fig:sammenligning}, at begge led går mod $0$ for store $r$, hvorfor WKB-metoden har god overenstemmelse med den eksakte løsning for store $r$.
 
 \begin{figure}[h!]
     \centering
+    \caption{Sammenligning mellem brints eksakte- og WKB-metodens løsninger.}
     \begin{subfigure}[t]{0.48\textwidth}
         \centering
         \includegraphics[width=\linewidth]{energyPlot}
@@ -152,6 +153,5 @@ Dette giver anledning til en sammenligning mellem de eksakte-  og de approksimer
         \caption{Her ses de asymptotiske værdier for brints bølgefunktion, hvor der sammenlignes med de eksakte løsninger og WKB-metodens løsninger.}
         \label{fig:sammenligning}
     \end{subfigure}
-    \caption{Sammenligning mellem brints eksakte- og WKB-metodens løsninger.}
     \label{bigfig}
 \end{figure}

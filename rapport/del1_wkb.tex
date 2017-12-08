@@ -1,6 +1,6 @@
 
 \section{WKB approksimation i brug ved Schrödingerligningen}
-I dette afsnit vil vi betragte Schrödingerligningen for en partikel i én dimension. Introduceres den klassiske impuls, som er givet ved $p(x) = \sqrt{2m(E-V(x)}$, kan man omskrive ligningen.
+I dette afsnit vil vi betragte Schrödingerligningen for en partikel i én dimension. Introduceres den klassiske impuls, som er givet ved $p(x) = \sqrt{2m(E-V(x)}$, kan man omskrive ligningen
 %
 \begin{align}
     & \frac{\hbar^2}{2m} \pdiff[2]{\psi(x)}{x} + V(x)\psi(x) = E\psi(x), \\
@@ -8,7 +8,7 @@ I dette afsnit vil vi betragte Schrödingerligningen for en partikel i én dimen
     \label{eq:schrodingerligning}
 \end{align}
 %
-Det er kendt, at $\psi(x) \in \mathbb{C}$ er en kompleksfunktion som kan skrives som et produkt af en reel amplitude, $A \in \mathbb{R}$ og en kompleks eksponential med reel fase $\phi(x)\in \mathbb{R}$. Derfor anvendes nu ansatzen.
+Det er kendt, at $\psi(x) \in \mathbb{C}$ er en kompleksfunktion som kan skrives som et produkt af en reel amplitude, $A \in \mathbb{R}$ og en kompleks eksponential med reel fase $\phi(x)\in \mathbb{R}$. Derfor anvendes nu ansatzen
 \begin{equation}
     \psi(x) = A(x) e^{i \phi(x)}.
     \label{eq:ansatz}
@@ -42,16 +42,16 @@ Specielt gælder det at
   \frac{A''(x)}{A(x)} \ll \phi'(x)^{2}\wedge k(x)^2.
   \label{eq:TheApprox}
 \end{equation}
-Med antagelsen i \cref{eq:TheApprox} vil realdelen i \cref{eq:konst} reducere til
+Med antagelsen i \cref{eq:TheApprox} vil realdelen i \cref{eq:realogimag} reducere til
 \begin{align}
     0 = \frac{A''(x)}{A(x)} = -k(x)^{2} + (\phi'(x))^{2}
     \quad \Leftrightarrow\quad  \left(\phi'(x)\right)^{2} = k(x)^{2} \quad \Leftrightarrow \quad  \phi'(x) = \pm \frac{p}{\hbar}.
     \label{eq:ho}
 \end{align}
-Hvis der integreres med hensyn til x i \cref{eq:ho} findes
+Hvis der integreres med hensyn til $x$ i \cref{eq:ho} findes
 %
 \begin{equation}
-    \phi(x) = \pm \frac{1}{\hbar} \int p(x) dx
+    \phi(x) = \pm \frac{1}{\hbar} \int p(x) dx.
     \label{eq:thisPhi}
 \end{equation}
 %
@@ -61,10 +61,10 @@ Substitueres $A(x)$ fra \cref{eq:konst} og udtrykket for $\phi{'\left (x \right 
     \psi(x) = A(x) e^{i \phi(x)} \cong
     \frac{C}{\sqrt{( \phi{'\left (x \right )})}} e^{i \phi(x)} \cong
     \frac{C}{\sqrt{\frac{p(x)}{\hbar}}} e^{\pm \frac{i}{\hbar} \int p(x) dx} \cong
-    \frac{C'}{\sqrt{p(x)}} e^{\pm \frac{i}{\hbar} \int p(x) dx}
+    \frac{C'}{\sqrt{p(x)}} e^{\pm \frac{i}{\hbar} \int p(x) dx}.
     \label{eq:final}
 \end{equation}
 %
 Hvor $C'$ er en ny konstant, der indeholder $\hbar$ og evt. andre konstanter fra integralet. Dette er det endelige udtryk for WKB-approksimationen. Løsningen ville da være en linearkombination af den positive og negative eksponent. Det bemærkes ved Borns statistiske fortolkning, at sansynligheden for at partiklen måles ved et givent $x$ er omvendt proportionel med dens klassiske impuls (se \cref{eq:final}).
 \\
-Når $\psi(x)$ nærmer sig de klassiske vendepunkter, vil betingelsen fra \cref{eq:TheApprox} ikke gælde, da $E \approx V(x)$. Her er approksimationen ikke blot upræcis, men faktisk ugyldig. $E \rightarrow V(x)$ betyder at $p(x) \rightarrow 0$ og det ses fra \cref{eq:final}  at $\psi(x) \rightarrow \infty$. Løsningen her kan ikke normeres, hvorfor det ikke er en fysisk løsning. For at løse problemet ved de klassiske vendepunkter, anvendes såkaldte "lappe-ligninger" ved grænserne, men det er ikke formålet med denne rapport at vise disse.
+Når $\psi(x)$ nærmer sig de klassiske vendepunkter, vil betingelsen fra \cref{eq:TheApprox} ikke gælde, da $E \approx V(x)$. Her er approksimationen ikke blot upræcis, men faktisk ugyldig. $E \rightarrow V(x)$ betyder at $p(x) \rightarrow 0$ og det ses fra \cref{eq:final}  at $\psi(x) \rightarrow \infty$. Løsningen her kan ikke normeres, hvorfor det ikke er en fysisk løsning. For at løse problemet ved de klassiske vendepunkter, anvendes såkaldte "lappe-ligninger" \ ved grænserne, men det er ikke formålet med denne rapport at vise disse.
