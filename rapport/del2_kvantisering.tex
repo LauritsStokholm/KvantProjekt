@@ -24,3 +24,20 @@ Nu skal det stadig gælde at $\psi(b) = 0$, og da\footnote{Da dette ellers ville
     \phi(b) = n'\pi = \frac{1}{\hbar}\int_{a}^{b} p(x) dx \quad \Leftrightarrow \quad \int_{a}^{b} p(x) dx = n'\pi\hbar.
   \label{eq:kvantiDone}
 \end{equation}
+%TODO fjern evt dette energitjek ned i appendix hvis vi har for meget.
+Vi kan tjekke validiteten af \cref{eq:kvantiDone}, ved at anvende den på den uendelige brønd. Vi har altså
+\begin{align}
+    V(x) =
+    \begin{cases}
+    0, & x\in[a, b] \\
+    \infty, & \text{ellers}
+    \end{cases}
+\end{align}
+Kvantiseringsbetingelsen fra \cref{eq:kvantiDone} giver da, at
+\begin{align}
+    \int_{a}^{b} p(x) dx = & n\pi \hbar, \quad \text{hvor} \quad p(x) = \sqrt{2m(E-V_{\text{eff}})}\\
+    \Leftrightarrow \sqrt{2mE}\int_{a}^{b} dx = & \sqrt{2mE}(b-a) = n\pi \hbar\\
+    \Leftrightarrow E = & \frac{n^{2}\pi^{2}\hbar^{2}}{2m(b-a)^{2}},
+    %\label{ja}
+\end{align}
+hvilket stemmer overens med \cite[s. 30]{griffiths}. Dette kan forventes, da potentialet er $0$, vil approksimationen $A''(x) \approx 0$ fra \cref{eq:TheApprox} være eksakt, og derfor er dette resultat også eksakt.
