@@ -22,7 +22,7 @@ Da energien kan vælges at skrives som et produkt af rydbergenergien og en konst
 \end{align}
 Nu kan $\frac{1}{a_0}$ trækkes udenfor kvadratroden, og ved at gange $\mathrm{Ry}$ ind i parantesen vil man få
 \begin{align}
-    k(r) = & \frac{1}{a_0} \frac{1}{r} \sqrt{-\varepsilon r^2 + 2a_0r - a_0^2l(l+1)}, \\
+    k(r) = & \frac{1}{a_0} \frac{1}{r} \sqrt{-\varepsilon r^2 + 2a_0r - a_0^2l(l+1)} \\
     = & \frac{\sqrt{\varepsilon}}{a_0} \frac{1}{r} \sqrt{r^2 - \frac{2a_0}{\varepsilon}r + \frac{a_0^2}{\varepsilon}l(l+1)}.
 \end{align}
 Det indre af kvadratroden genkendes at være på formen $x^2 -x(a+b) + ab = (x-a)(x-b)$. Det er af interesse at bestemme $a$ og $b$ til at være de klassiske vendepunkter, da $k(a) = 0 = k(b)$. Da faktoren udenfor kvadratroden ikke er $0$, må det indre af kvadratroden være $0$.
@@ -46,108 +46,112 @@ For at det nu skal passe i vores udtryk for $k(r)$ tjekkes det om
 $a+b$ leddet er oplagt, mens $ab$ leddet bliver
 \begin{align}
   ab = & \frac{a_0^2}{\varepsilon^2}\Bigl(1-\sqrt{1-\varepsilon l(l+1)} \Bigr)\Bigl(1+\sqrt{1-\varepsilon l(l+1)} \Bigr)\\
-     = & \frac{a_0^2}{\varepsilon^2}\Bigl(1-(1-\varepsilon l(l+1)) \Bigr) =  \frac{a_0^2}{\varepsilon^2} \varepsilon l(l+1)
-     = \frac{a_0^2}{\varepsilon} l(l+1)
+  = & \frac{a_0^2}{\varepsilon^2}\Bigl(1-(1-\varepsilon l(l+1)) \Bigr) =  \frac{a_0^2}{\varepsilon^2} \varepsilon l(l+1)
+     = \frac{a_0^2}{\varepsilon} l(l+1).
 \end{align}
-
-Det ses at det passer og derfor kan vi arbejde videre med disse værdier $a$ og $b$.
+%
+Det stemmer overens, hvorfor der arbejdes videre med disse værdier.
 \begin{align}
-  k(r) = & \frac{p(r)}{\hbar} = \frac{\sqrt{\varepsilon}}{a_0}\frac{1}{r}\sqrt{(r-a)(r-b)}
+    k(r) = & \frac{p(r)}{\hbar} = \frac{\sqrt{\varepsilon}}{a_0}\frac{1}{r}\sqrt{(r-a)(r-b)}.
 \end{align}
-Nu kan vi altså integrere fra $a$ til $b$, som er de klassiske vendepunkter og bruge \cref{eq:kvantiDone}.
+Nu kan vi altså integrere fra $a$ til $b$, som er de klassiske vendepunkter. Løsningen til integralet følger fra identiteten:
 \begin{equation}
-  \int_{a}^{b}k(r)dr = \frac{\sqrt{\varepsilon}}{a_0} \Bigl[\frac{\pi}{2}(\sqrt{b}-\sqrt{a})^2  \Bigr]
+    \int_{\alpha}^{\beta}\frac{1}{u}\sqrt{(u-\alpha)(u-\beta)}du = \frac{\pi}{2}(\sqrt{\beta}-\sqrt{\alpha})^2,
 \end{equation}
-Her er det brugt at
+som ved brug af \cref{eq:kvantiDone} vil give
 \begin{equation}
-  \int_{\alpha}^{\beta}\frac{1}{u}\sqrt{(u-\alpha)(u-\beta)}du = \frac{\pi}{2}(\sqrt{\beta}-\sqrt{\alpha})^2
+   n'\pi = \int_{a}^{b}k(r)dr = \frac{\sqrt{\varepsilon}}{a_0} \Bigl[\frac{\pi}{2}(\sqrt{b}-\sqrt{a})^2  \Bigr].
 \end{equation}
-Herfra følger det at
+%
+Ved at isolere for $n'$, og indsætte værdierne for de klassiske vendepunkter fremkommer
 \begin{align}
   n' = & \frac{\sqrt{\varepsilon}}{2a_0}(\sqrt{b}-\sqrt{a})^2 = \frac{\sqrt{\varepsilon}}{2a_0}(b+a-2\sqrt{ab})\\
      = & \frac{\sqrt{\varepsilon}}{2a_0}\Bigl(\frac{2a_0}{\varepsilon}-2a_0\sqrt{\frac{1}{\varepsilon}l(l+1)}\Bigr)\\
-     = & \frac{1}{\sqrt{\varepsilon}} -l(l+1)
+     = & \frac{1}{\sqrt{\varepsilon}} -l(l+1).
 \end{align}
 Herfra finder vi $\varepsilon$ til at være
 \begin{equation}
-  \varepsilon = \frac{1}{\Bigl[n'+l(l+1)  \Bigr]^2}
+    \varepsilon = \frac{1}{\Bigl[n'+l(l+1)  \Bigr]^2}.
 \end{equation}
-Og da $E = -\varepsilon Ry$, så kan vi skrives
+Da $E = -\varepsilon \mathrm{Ry}$, kan det skrives
 \begin{equation}
-  E_{n',l} = \frac{-Ry}{\Bigl[n'+l(l+1)  \Bigr]^2}
+    E_{n'l} = \frac{-\mathrm{Ry}}{\Bigl[n'+l(l+1)  \Bigr]^2},
+    \label{eq:energifinale}
 \end{equation}
+hvilket nu viser at energien er afhængig af både $n'$ og $l$. Dette er forskelligt fra den kendte teori, hvor energien blot afhænger af det primære kvantetal. En sammenligning mellem de eksakte- og de approksimerede løsninger til brints energiniveauer, kan ses på \cref{fig:hydrogen}. Som forventet vil WKB-metoden være eksakt såfremt $l=0$. Dog vil der fra WKB-metoden også være energiniveauer, som er mellem to eksakte løsninger for $l\neq 0$. Det fremstår at WKB-metoden ikke altid er god, men for $n'\gg l$, vil WKB-metoden tilnærme sig de eksakte løsninger, da $n'$ dominerer i \cref{eq:energifinale}.
 
-Nu kigger vi på den asymptotiske form for bølgefunktionerne ved store $r$.
-I det eksakte tilfælde er de på formen
+Lad os nu se på den asymptotiske form for brints bølgefunktioner ved $r\gg a_0$. Det kan vises, at de i det eksakte tilfælde er på formen
 \begin{equation}
-  R_{nl}(r) \sim \left(\frac{r}{a_0}\right)^{n-1}e^{-r/na_0}
+    R_{nl}(r) \sim \left(\frac{r}{a_0}\right)^{n-1}e^{-r/na_0}.
   \label{eq:eksaktR}
 \end{equation}
-
-For at finde dem i WKB tilfældet kigges først på formen af en sådan bølgefunktion. Det kan vises at den er på formen %TODO find formen her
+%
+For at bestemme værdierne af $R_{n'l}$ ved WKB-metoden betragtes først $u(r)$, som kan vises at være på formen
 \begin{equation}
-  u(r) \sim exp\Bigl[-\int_{a_0}^{r}k(r')dr'\Bigr]
+    u(r) \sim \exp\Bigl[-\int_{a_0}^{r}k(r')dr'\Bigr].
+    \label{rasmusvilhaveetintegrale}
 \end{equation}
-Først kigges der på $k(r)$ da vi gerne vil lave en rækkeudvikling da vi kun kigger på meget store $r$.
-Vi har altså at
+For at løse integralet, må vi først betragte $k(r)$ for store værdier af $r$, hvorfor det rækkeudvikles. Det er tidligere fundet, at
 \begin{equation}
-  k(r) = \frac{\sqrt{\varepsilon}}{a_0}\frac{1}{r}\sqrt{(r-a)(r-b)}
+    k(r) = \frac{\sqrt{\varepsilon}}{a_0}\frac{1}{r}\sqrt{(r-a)(r-b)}.
 \end{equation}
-Her lader vi $\frac{1}{r}$ gå ind under kvadratroden og vi får
+Trækkes $\frac{1}{r}$ ind i kvadratroden, vil
 \begin{align}
-  k(r) = & \frac{\sqrt{\varepsilon}}{a_0}\sqrt{(1-\frac{a}{r})(1-\frac{b}{r})} = \frac{\sqrt{\varepsilon}}{a_0}\sqrt{1-\frac{a+b}{r}+\frac{ab}{r^2}}
+    k(r) = & \frac{\sqrt{\varepsilon}}{a_0}\sqrt{(1-\frac{a}{r})(1-\frac{b}{r})} = \frac{\sqrt{\varepsilon}}{a_0}\sqrt{1-\frac{a+b}{r}+\frac{ab}{r^2}}.
 \end{align}
-Her beholder vi kun til første orden og vi får altså noget som vi kan rækkeudvikle ved den sædvanelige kvadratrods række.
+Her beholder vi kun til første orden, og vi får noget, som vi kan rækkeudvikle ved den sædvanlige kvadratrodsrække.
 \begin{align}
   k(r) \approx & \frac{\sqrt{\varepsilon}}{a_0}\sqrt{1-\frac{a+b}{r}}\\
-       = & \frac{\sqrt{\varepsilon}}{a_0}(1-\frac{1}{2}\frac{a+b}{r})
+  = & \frac{\sqrt{\varepsilon}}{a_0}\left(1-\frac{1}{2}\frac{a+b}{r}\right).
 \end{align}
-Husker vi på $a+b = \frac{2a_0}{\varepsilon}$ så får vi
+Da $a+b = \frac{2a_0}{\varepsilon}$ får vi:
 \begin{equation}
-  k(r) = \frac{\sqrt{\varepsilon}}{a_0}-\frac{1}{\sqrt{\varepsilon}r}
+  k(r) = \frac{\sqrt{\varepsilon}}{a_0}-\frac{1}{\sqrt{\varepsilon}r}.
 \end{equation}
 \\
-Kigger vi da på integralet har vi at
+Kigger vi da på integralet fra \cref{rasmusvilhaveetintegrale}, har vi at
 \begin{align}
-  \int_{a_0}^{r}k(r')dr' = & \frac{\sqrt{\varepsilon}}{a_0}(r-a_0) - \frac{1}{\sqrt{\varepsilon}}\left(\ln{r}-\ln{a_0}\right)\\
-  = & \frac{\sqrt{\varepsilon}}{a_0}(r-a_0) - \ln{((\frac{r}{a_0})^{\frac{1}{\sqrt{\varepsilon}}})}
+    \int_{a_0}^{r}k(r')dr' = \int_{a_0}^{r} \frac{\sqrt{\varepsilon}}{a_0}-\frac{1}{\sqrt{\varepsilon}r'} dr'= 
+& \frac{\sqrt{\varepsilon}}{a_0}(r-a_0) - \frac{1}{\sqrt{\varepsilon}}\left(\ln{r}-\ln{a_0}\right)\\
+= & \frac{\sqrt{\varepsilon}}{a_0}(r-a_0) - \ln{((\frac{r}{a_0})^{\frac{1}{\sqrt{\varepsilon}}})}.
 \end{align}
 %
 Så nu kan vi altså skrive vores $u(r)$ op som
 \begin{align}
   u(r) \sim & \exp\left[-\frac{\sqrt{\varepsilon}}{a_0}(r-a_0) + \ln{((\frac{r}{a_0})^{\frac{1}{\sqrt{\varepsilon}}})}\right]\\
-        = & \exp\left[-\frac{\sqrt{\varepsilon}}{a_0}(r-a_0)\right] + (\frac{r}{a_0})^{\frac{1}{\sqrt{\varepsilon}}}\\
-        = & \exp\left[\sqrt{\varepsilon}(1-\frac{r}{a_0})\right] + (\frac{r}{a_0})^{\frac{1}{\sqrt{\varepsilon}}}
+        = & \exp\left[-\frac{\sqrt{\varepsilon}}{a_0}(r-a_0)\right] {\left(\frac{r}{a_0}\right)}^{\frac{1}{\sqrt{\varepsilon}}}\\
+        = & \exp\left[\sqrt{\varepsilon}(1-\frac{r}{a_0})\right] {\left(\frac{r}{a_0}\right)}^{\frac{1}{\sqrt{\varepsilon}}}.
 \end{align}
 Nu bruges det blot at
 \begin{equation}
-  \varepsilon = \frac{1}{\left[n'+\sqrt{l(l+1)}\right]^2}
+    \varepsilon = \frac{1}{\left[n'+\sqrt{l(l+1)}\right]^2},
 \end{equation}
-Og det giver os altså at
+og det giver os altså at
 \begin{equation}
-  u(r) \sim {\left(\frac{r}{a_0}\right)}^{\left[n'+\sqrt{l(l+1)}\right]} e^{\left[\frac{1-\frac{r}{a_0}}{n'+\sqrt{l(l+1)}}\right]}
+    u(r) \sim {\left(\frac{r}{a_0}\right)}^{\left[n'+\sqrt{l(l+1)}\right]} e^{\left[\frac{1-\frac{r}{a_0}}{n'+\sqrt{l(l+1)}}\right]}.
 \end{equation}
-Derved bliver $R(r) = u(r)/r$
+Derved bliver $R_{n'l}(r) = u(r)/r$
 \begin{equation}
-  R(r) = \frac{1}{a_0}{\left(\frac{r}{a_0}\right)}^{\left[n'-1+\sqrt{l(l+1)}\right]} e^{\left[\frac{1-\frac{r}{a_0}}{n'+\sqrt{l(l+1)}}\right]}
+    R_{n'l}(r) = \frac{1}{a_0}{\left(\frac{r}{a_0}\right)}^{\left[n'-1+\sqrt{l(l+1)}\right]} e^{\left[\frac{1-\frac{r}{a_0}}{n'+\sqrt{l(l+1)}}\right]}.
   \label{eq:rAfR}
 \end{equation}
-Dette giver anledning til en sammenligning mellem \cref{eq:eksaktR} og \cref{eq:rAfR}. Det ses at vi i begge udtryk har to led: et polynomielt led og et eksponentielt led. WKB approksimationen har dog taget højde for kvantetallet $l$ hvilket den eksakte løsning ikke har. Det ses dog at begge led de går i $0$ for store $r$, altså gælder approksimationen for store $r$.
+Dette giver anledning til en sammenligning mellem de eksakte-  og de approksimerede løsninger (se hhv. \cref{eq:eksaktR} og \cref{eq:rAfR}). Begge udtryk er et produkt af to led: et polynomielt- og et eksponentielt led. WKB approksimationen tager dog højde for kvantetallet $l$, hvad den eksakte løsning ikke gør. Det ses at begge led går mod $0$ for store $r$, hvorfor WKB-metoden har god overenstemmelse med den eksakte løsning for store $r$.
 
 \begin{figure}[h!]
     \centering
-    \begin{subfigure}{0.45\textwidth}
+    \begin{subfigure}[t]{0.48\textwidth}
         \centering
-        \includegraphics[width=\columnwidth]{sammenligning.png}
-        \caption{Hydrogen}
+        \includegraphics[width=\linewidth]{energyPlot}
+        \caption{Her ses energiniveauerne for hydrogen ved $n, n'\in[2, 8]$. Første kolonne viser de eksakte løsninger og de resterende kolonner viser WKB-metodens løsninger ved forskellige værdier af $l$.} 
         \label{fig:hydrogen}
-    \end{subfigure}
-    \begin{subfigure}{0.45\textwidth}
+    \end{subfigure}%
+    \hfill
+    \begin{subfigure}[t]{0.48\textwidth}
         \centering
-        \includegraphics[width=\columnwidth]{energyPlot}
-        \caption{Hydrogen}
-        \label{fig:sammenlign}
+        \includegraphics[width=\linewidth]{sammenligning}
+        \caption{Her ses de asymptotiske værdier for brints bølgefunktion, hvor der sammenlignes med de eksakte løsninger og WKB-metodens løsninger.}
+        \label{fig:sammenligning}
     \end{subfigure}
-    \caption{2 figurer}
-    \label{storfig}
+    \caption{Sammenligning mellem brints eksakte- og WKB-metodens løsninger.}
+    \label{bigfig}
 \end{figure}
