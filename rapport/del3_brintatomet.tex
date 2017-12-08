@@ -139,18 +139,19 @@ Dette giver anledning til en sammenligning mellem de eksakte-  og de approksimer
 
 \begin{figure}[h!]
     \centering
-    \begin{subfigure}{0.45\columnwidth}
+    \begin{subfigure}[t]{0.48\textwidth}
         \centering
-        \includegraphics[width=\columnwidth]{energyPlot}
+        \includegraphics[width=\linewidth]{energyPlot}
         \caption{Her ses energiniveauerne for hydrogen ved $n, n'\in[2, 8]$. Første kolonne viser de eksakte løsninger og de resterende kolonner viser WKB-metodens løsninger ved forskellige værdier af $l$.} 
         \label{fig:hydrogen}
-    \end{subfigure}
-    \begin{subfigure}{0.45\columnwidth}
+    \end{subfigure}%
+    \hfill
+    \begin{subfigure}[t]{0.48\textwidth}
         \centering
-        \includegraphics[width=\columnwidth]{sammenligning}
-        \caption{sammenligning}
+        \includegraphics[width=\linewidth]{sammenligning}
+        \caption{Her ses de asymptotiske værdier for brints bølgefunktion, hvor der sammenlignes med de eksakte løsninger og WKB-metodens løsninger.}
         \label{fig:sammenligning}
     \end{subfigure}
-    \caption{Figurer}
+    \caption{Sammenligning mellem brints eksakte- og WKB-metodens løsninger.}
     \label{bigfig}
 \end{figure}
